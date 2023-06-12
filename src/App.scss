@@ -1,0 +1,255 @@
+@import "./variables.scss";
+
+.app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  max-height: -webkit-fill-available;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+
+  &.light {
+    animation: lightBackground 200ms infinite;
+
+    color: $color-white;
+    background-color: $color-white;
+
+    .backdrop {
+      opacity: 1;
+    }
+
+    @keyframes lightBackground {
+      0% {
+        background-color: $color-white;
+      }
+      20% {
+        background-color: $color-black;
+      }
+      40% {
+        background-color: $color-white;
+      }
+      60% {
+        background-color: $color-black;
+      }
+      80% {
+        background-color: $color-white;
+      }
+    }
+  }
+
+  .header {
+    position: fixed;
+    top: 32px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    .logo {
+      max-width: 200px;
+    }
+
+    button {
+      @include for-phone-only {
+        display: none;
+      }
+
+      all: unset;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      text-shadow: 2px 3px $color-black;
+      cursor: pointer;
+
+      position: relative;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $color-yellow;
+
+        &:before {
+          position: absolute;
+          content: " ";
+          background-color: $color-red;
+          width: 120%;
+          margin-left: -5%;
+          height: 100%;
+          box-shadow: 4px 4px 0px darken($color-red, 25%);
+        }
+
+        img,
+        span {
+          transform: scale(1.2);
+        }
+      }
+
+      img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .sidebar-button {
+    @include for-desktop {
+      display: none;
+    }
+
+    all: unset;
+    cursor: pointer;
+    position: fixed;
+    right: 32px;
+    top: 32px;
+    z-index: 1;
+
+    img {
+      max-height: 40px;
+      max-width: 8vw;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      filter: contrast(200%) brightness(200%);
+      z-index: 3;
+    }
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-image: url("./images/textures/dust.png");
+    filter: invert(1);
+    animation: changeBackground 0.5s steps(1) infinite alternate-reverse;
+    opacity: 0.5;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    gap: 16px;
+    bottom: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+
+    @include for-desktop {
+      gap: 24px;
+      bottom: 96px;
+    }
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-shadow: 2px 3px $color-black;
+
+      @include for-desktop {
+        font-size: 32px;
+      }
+    }
+
+    button {
+      all: unset;
+      cursor: pointer;
+      color: $color-red;
+      font-family: "Martian Mono", monospace;
+      font-weight: 400;
+      background-color: $color-red;
+      color: $color-white;
+      padding: 12px 0;
+      border: 1px double $color-red;
+      text-shadow: 2px 3px $color-black;
+      font-size: 16px;
+      width: 100%;
+      text-align: center;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      @include for-desktop {
+        background-color: $color-black;
+        color: $color-red;
+        font-size: 24px;
+        padding: 24px 0;
+      }
+    }
+  }
+
+  .monsters {
+    position: fixed;
+    bottom: -2px;
+  }
+
+  .spidergang {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    padding: 32px;
+    z-index: 5;
+
+    img {
+      object-fit: contain;
+      height: 100px;
+    }
+
+    @include for-phone-only {
+      transform: translateY(100%);
+      transition: transform 0.5s ease;
+
+      img {
+        height: 120px;
+      }
+
+      &.open {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url("./images/textures/dust.png");
+  }
+  20% {
+    background-image: url("./images/textures/concrete-wall-2.png");
+  }
+  40% {
+    background-image: url("./images/textures/old-wall.png");
+  }
+  60% {
+    background-image: url("./images/textures/concrete-wall.png");
+  }
+  80% {
+    background-image: url("./images/textures/asfalt-dark.png");
+  }
+  100% {
+    background-image: url("./images/textures/old-wall.png");
+  }
+}

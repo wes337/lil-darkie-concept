@@ -1,10 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
+import "./fonts/SulMonoTest-Black.otf";
+import "./fonts/SulMonoTest-Bold.otf";
+import "./fonts/SulMonoTest-Medium.otf";
+import "./fonts/SulMonoTest-Regular.otf";
+import "./fonts/SulMonoTest-Light.otf";
+import "./index.scss";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
