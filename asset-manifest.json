@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/lil-darkie-concept/static/css/main.0a5e2a4d.css",
+    "main.js": "/lil-darkie-concept/static/js/main.2d347856.js",
+    "static/js/787.e997bd31.chunk.js": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js",
+    "static/media/mushroom.png": "/lil-darkie-concept/static/media/mushroom.d493893f0dd40453f62e.png",
+    "static/media/concrete-wall-2.png": "/lil-darkie-concept/static/media/concrete-wall-2.28844a728d06b7ed765b.png",
+    "static/media/dust.png": "/lil-darkie-concept/static/media/dust.5e79dee42ca9cf9ce81a.png",
+    "static/media/spidergang.png": "/lil-darkie-concept/static/media/spidergang.02213e37f3ad70555ec7.png",
+    "static/media/concrete-wall.png": "/lil-darkie-concept/static/media/concrete-wall.26941afecc5d52c56e41.png",
+    "static/media/old-wall.png": "/lil-darkie-concept/static/media/old-wall.7da1af8aae31d9cee3db.png",
+    "static/media/face-1.png": "/lil-darkie-concept/static/media/face-1.273ca17f5168c6ef27c4.png",
+    "static/media/gun.png": "/lil-darkie-concept/static/media/gun.c65a37a4eb95292c86cd.png",
+    "static/media/grave.png": "/lil-darkie-concept/static/media/grave.b71c7559ae5187bfc462.png",
+    "static/media/knife.png": "/lil-darkie-concept/static/media/knife.355244d38540c1c8e2fa.png",
+    "static/media/monsters.png": "/lil-darkie-concept/static/media/monsters.ff65d1a99fd166a82563.png",
+    "static/media/face-1-blink.png": "/lil-darkie-concept/static/media/face-1-blink.fdae5077f76a9ee052be.png",
+    "static/media/booze.png": "/lil-darkie-concept/static/media/booze.ce2f8985e53572d8decb.png",
+    "static/media/asfalt-dark.png": "/lil-darkie-concept/static/media/asfalt-dark.12fc1a7a26724fd592f6.png",
+    "static/media/logo-yellow.png": "/lil-darkie-concept/static/media/logo-yellow.025191c407aababcef53.png",
+    "static/media/logo-small.webp": "/lil-darkie-concept/static/media/logo-small.55ae7086f89eef872476.webp",
+    "static/media/cig.png": "/lil-darkie-concept/static/media/cig.cd376386e2ae9d49be3a.png",
+    "static/media/skull.png": "/lil-darkie-concept/static/media/skull.898310a283b63cf3874a.png",
+    "static/media/SulMonoTest-Light.otf": "/lil-darkie-concept/static/media/SulMonoTest-Light.b3aaa18bd55e560390ab.otf",
+    "static/media/SulMonoTest-Regular.otf": "/lil-darkie-concept/static/media/SulMonoTest-Regular.e015dbf25199c3a6f54c.otf",
+    "static/media/SulMonoTest-Bold.otf": "/lil-darkie-concept/static/media/SulMonoTest-Bold.2133a718f9f811d4d22e.otf",
+    "static/media/SulMonoTest-Medium.otf": "/lil-darkie-concept/static/media/SulMonoTest-Medium.76ff5db40debe4905809.otf",
+    "static/media/SulMonoTest-Black.otf": "/lil-darkie-concept/static/media/SulMonoTest-Black.4bc1b6976c5f85ee7a05.otf",
+    "index.html": "/lil-darkie-concept/index.html",
+    "main.0a5e2a4d.css.map": "/lil-darkie-concept/static/css/main.0a5e2a4d.css.map",
+    "main.2d347856.js.map": "/lil-darkie-concept/static/js/main.2d347856.js.map",
+    "787.e997bd31.chunk.js.map": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a5e2a4d.css",
+    "static/js/main.2d347856.js"
+  ]
+}
