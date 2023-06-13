@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/lil-darkie-concept/static/css/main.b358872d.css",
-    "main.js": "/lil-darkie-concept/static/js/main.2d347856.js",
+    "main.css": "/lil-darkie-concept/static/css/main.07ea07b9.css",
+    "main.js": "/lil-darkie-concept/static/js/main.9d55b7dd.js",
     "static/js/787.e997bd31.chunk.js": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js",
+    "static/media/tour-full.png": "/lil-darkie-concept/static/media/tour-full.d0b38e73198fe4f13e42.png",
+    "static/media/fall-tour-title-dark.png": "/lil-darkie-concept/static/media/fall-tour-title-dark.0469cf2748b1ab24b112.png",
+    "static/media/plane-1.png": "/lil-darkie-concept/static/media/plane-1.694f63957dddb3861df9.png",
     "static/media/mushroom.png": "/lil-darkie-concept/static/media/mushroom.d493893f0dd40453f62e.png",
     "static/media/concrete-wall-2.png": "/lil-darkie-concept/static/media/concrete-wall-2.28844a728d06b7ed765b.png",
+    "static/media/plane-2.png": "/lil-darkie-concept/static/media/plane-2.ba8173f616a9f7def9df.png",
     "static/media/dust.png": "/lil-darkie-concept/static/media/dust.5e79dee42ca9cf9ce81a.png",
-    "static/media/spidergang.png": "/lil-darkie-concept/static/media/spidergang.02213e37f3ad70555ec7.png",
     "static/media/concrete-wall.png": "/lil-darkie-concept/static/media/concrete-wall.26941afecc5d52c56e41.png",
     "static/media/old-wall.png": "/lil-darkie-concept/static/media/old-wall.7da1af8aae31d9cee3db.png",
     "static/media/face-1.png": "/lil-darkie-concept/static/media/face-1.273ca17f5168c6ef27c4.png",
@@ -21,18 +24,13 @@
     "static/media/logo-small.webp": "/lil-darkie-concept/static/media/logo-small.55ae7086f89eef872476.webp",
     "static/media/cig.png": "/lil-darkie-concept/static/media/cig.cd376386e2ae9d49be3a.png",
     "static/media/skull.png": "/lil-darkie-concept/static/media/skull.898310a283b63cf3874a.png",
-    "static/media/SulMonoTest-Light.otf": "/lil-darkie-concept/static/media/SulMonoTest-Light.b3aaa18bd55e560390ab.otf",
-    "static/media/SulMonoTest-Regular.otf": "/lil-darkie-concept/static/media/SulMonoTest-Regular.e015dbf25199c3a6f54c.otf",
-    "static/media/SulMonoTest-Bold.otf": "/lil-darkie-concept/static/media/SulMonoTest-Bold.2133a718f9f811d4d22e.otf",
-    "static/media/SulMonoTest-Medium.otf": "/lil-darkie-concept/static/media/SulMonoTest-Medium.76ff5db40debe4905809.otf",
-    "static/media/SulMonoTest-Black.otf": "/lil-darkie-concept/static/media/SulMonoTest-Black.4bc1b6976c5f85ee7a05.otf",
     "index.html": "/lil-darkie-concept/index.html",
-    "main.b358872d.css.map": "/lil-darkie-concept/static/css/main.b358872d.css.map",
-    "main.2d347856.js.map": "/lil-darkie-concept/static/js/main.2d347856.js.map",
+    "main.07ea07b9.css.map": "/lil-darkie-concept/static/css/main.07ea07b9.css.map",
+    "main.9d55b7dd.js.map": "/lil-darkie-concept/static/js/main.9d55b7dd.js.map",
     "787.e997bd31.chunk.js.map": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b358872d.css",
-    "static/js/main.2d347856.js"
+    "static/css/main.07ea07b9.css",
+    "static/js/main.9d55b7dd.js"
   ]
 }
