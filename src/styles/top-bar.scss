@@ -13,8 +13,17 @@
 
   .top-bar-logo {
     max-width: 200px;
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      transform: rotate(-5deg) scale(1.2);
+    }
   }
 
+  a:not(.top-bar-logo),
   button {
     @include for-phone-only {
       display: none;
@@ -27,10 +36,9 @@
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-weight: 600;
+    font-weight: 700;
     text-shadow: 2px 3px $color-black;
     cursor: pointer;
-
     position: relative;
 
     &:hover,
@@ -58,6 +66,24 @@
       width: 48px;
       height: 48px;
       object-fit: contain;
+    }
+  }
+
+  &.light {
+    background-color: $color-white;
+
+    a,
+    button {
+      color: $color-yellow;
+      text-shadow: -1px -1px 0 $color-black, 1px -1px 0 $color-black,
+        -1px 1px 0 $color-black, 1px 1px 0 $color-black, 2px 2px $color-black;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $color-yellow;
+        text-shadow: 2px 3px $color-black;
+      }
     }
   }
 }

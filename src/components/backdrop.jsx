@@ -4,36 +4,39 @@ import useStore from "../store";
 import "../styles/backdrop.scss";
 
 export default function Backdrop() {
-  const { flashing, setFlashing } = useStore();
+  const { lightMode, flashing, setFlashing } = useStore();
 
   useEffect(() => {
-    let initialLightTimeout;
-    let lightTimeout;
+    let initialFlashingTimeout;
+    let flashingTimeout;
+    setFlashing(false);
 
-    const triggerLight = () => {
+    const triggerFlashing = () => {
       setFlashing(true);
-      const lightDuration = getRandomNumberBetween(500, 1000);
-      lightTimeout = setTimeout(() => setFlashing(false), lightDuration);
+      const flashingDuration = getRandomNumberBetween(1000, 1500);
+      flashingTimeout = setTimeout(() => setFlashing(false), flashingDuration);
     };
 
-    const lightInterval = setInterval(() => {
+    const flashingInterval = setInterval(() => {
       const random = Math.random() < 0.5;
 
       if (random) {
-        triggerLight();
+        triggerFlashing();
       }
     }, 5000);
 
-    initialLightTimeout = setTimeout(() => {
-      triggerLight();
-    }, 1000);
+    initialFlashingTimeout = setTimeout(() => {
+      triggerFlashing();
+    }, 1500);
 
     return () => {
-      clearInterval(lightInterval);
-      clearTimeout(lightTimeout);
-      clearTimeout(initialLightTimeout);
+      clearInterval(flashingInterval);
+      clearTimeout(flashingTimeout);
+      clearTimeout(initialFlashingTimeout);
     };
   }, [setFlashing]);
 
-  return <div className={`backdrop${flashing ? " flashing" : ""}`} />;
+  return (
+    <div className={`backdrop${flashing || lightMode ? " flashing" : ""}`} />
+  );
 }

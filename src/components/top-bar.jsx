@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import useStore from "../store";
 import logo from "../images/logo-small.webp";
 import skull from "../images/icons/skull.png";
 import booze from "../images/icons/booze.png";
@@ -6,21 +8,25 @@ import grave from "../images/icons/grave.png";
 import "../styles/top-bar.scss";
 
 export default function TopBar() {
+  const { lightMode } = useStore();
+
   return (
-    <div className="top-bar">
-      <button>
+    <div className={`top-bar${lightMode ? " light" : ""}`}>
+      <Link to="https://www.smalldarkone.com">
         <img src={gun} alt="" />
         <span>Merch</span>
-      </button>
-      <button>
-        <img src={grave} alt="" />
-        <span>Gallery</span>
-      </button>
-      <img className="top-bar-logo" src={logo} alt="Lil Darkie" />
-      <button>
+      </Link>
+      <Link to="/gallery">
         <img src={skull} alt="" />
+        <span>Gallery</span>
+      </Link>
+      <Link to="/" className="top-bar-logo">
+        <img src={logo} alt="Lil Darkie" />
+      </Link>
+      <Link to="/upcoming-shows">
+        <img src={grave} alt="" />
         <span>Upcoming Shows</span>
-      </button>
+      </Link>
       <button>
         <img src={booze} alt="" />
         <span>More</span>

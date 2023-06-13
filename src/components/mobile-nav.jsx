@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import useStore from "../store";
 import menu from "../images/menu.png";
 import logo from "../images/logo-yellow.png";
@@ -14,7 +16,12 @@ import close from "../images/icons/close.png";
 import "../styles/mobile-nav.scss";
 
 export default function MobileNav() {
+  const location = useLocation();
   const { mobileNavOpen, setMobileNavOpen } = useStore();
+
+  useEffect(() => {
+    setMobileNavOpen(false);
+  }, [location, setMobileNavOpen]);
 
   return (
     <>
@@ -35,42 +42,38 @@ export default function MobileNav() {
           </button>
         </div>
         <div className="mobile-nav-links">
-          <button>
+          <Link to="https://www.smalldarkone.com">
             <img src={gun} alt="" />
             <span>Merch</span>
-          </button>
-          <button>
-            <img src={grave} alt="" />
-            <span>Gallery</span>
-          </button>
-          <button>
+          </Link>
+          <Link to="/gallery">
             <img src={skull} alt="" />
+            <span>Gallery</span>
+          </Link>
+          <Link to="/upcoming-shows">
+            <img src={grave} alt="" />
             <span>Upcoming Shows</span>
-          </button>
-          <button>
+          </Link>
+          <Link to="/fall-tour">
             <img src={knife} alt="" />
             <span>Fall 2023 Tour</span>
-          </button>
-          <button>
+          </Link>
+          <Link to="/posters">
             <img src={cig} alt="" />
             <span>Posters</span>
-          </button>
-          <button>
+          </Link>
+          <Link to="/art">
             <img src={gun} alt="" />
             <span>Some Art</span>
-          </button>
-          <button>
+          </Link>
+          <Link to="/writing">
             <img src={booze} alt="" />
             <span>Writing</span>
-          </button>
-          <button>
+          </Link>
+          <Link to="/the-lost-songs">
             <img src={grave} alt="" />
             <span>The Lost Songs</span>
-          </button>
-        </div>
-        <div className={`planes${mobileNavOpen ? " open" : ""}`}>
-          <img className="plane-one" src={planeTwo} alt="" />
-          <img className="plane-two" src={planeOne} alt="" />
+          </Link>
         </div>
         <div className="mobile-nav-copyright">
           Copyright © 2023 Lil Darkie - All Rights Reserved.
@@ -78,6 +81,10 @@ export default function MobileNav() {
       </div>
       <div className={`mushroom${mobileNavOpen ? " open" : ""}`}>
         <img src={mushroom} alt="" />
+      </div>
+      <div className={`planes${mobileNavOpen ? " open" : ""}`}>
+        <img className="plane-one" src={planeTwo} alt="" />
+        <img className="plane-two" src={planeOne} alt="" />
       </div>
     </>
   );
