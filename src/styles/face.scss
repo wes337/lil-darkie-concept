@@ -11,9 +11,10 @@
   justify-content: center;
   z-index: 0;
   pointer-events: none;
+  margin-bottom: 150px;
 
   @include for-desktop {
-    margin-bottom: 100px;
+    margin-bottom: 300px;
   }
 
   img {

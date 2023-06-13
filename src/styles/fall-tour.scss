@@ -1,0 +1,12 @@
+@import "./variables.scss";
+
+.fall-tour {
+  max-width: 1920px;
+  margin: auto;
+  background-color: $color-white;
+  margin-top: 100px;
+
+  img {
+    width: 100%;
+  }
+}

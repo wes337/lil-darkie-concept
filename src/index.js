@@ -1,18 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Root from "./routes/root";
+import Landing from "./routes/landing";
+import UpcomingShows from "./routes/upcoming-shows";
+import FallTour from "./routes/fall-tour";
 import reportWebVitals from "./reportWebVitals";
-import App from "./App";
-import "./fonts/SulMonoTest-Black.otf";
-import "./fonts/SulMonoTest-Bold.otf";
-import "./fonts/SulMonoTest-Medium.otf";
-import "./fonts/SulMonoTest-Regular.otf";
-import "./fonts/SulMonoTest-Light.otf";
-import "./index.scss";
+import "./styles/global.scss";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: <Landing />,
+      },
+      {
+        path: "/upcoming-shows",
+        element: <UpcomingShows />,
+      },
+      {
+        path: "/fall-tour",
+        element: <FallTour />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

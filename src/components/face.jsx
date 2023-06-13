@@ -1,13 +1,9 @@
 import { useState, useEffect } from "react";
-import face from "./images/face/face-1.png";
-import faceBlink from "./images/face/face-1-blink.png";
-import "./Face.scss";
+import face from "../images/face/face-1.png";
+import faceBlink from "../images/face/face-1-blink.png";
+import "../styles/face.scss";
 
-export function getRandomNumberBetween(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function Face() {
+export default function Face() {
   const [blinking, setBlinking] = useState(false);
 
   useEffect(() => {
@@ -44,5 +40,3 @@ function Face() {
     </div>
   );
 }
-
-export default Face;

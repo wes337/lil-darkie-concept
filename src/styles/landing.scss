@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-.app {
+.landing {
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -9,17 +9,15 @@
   justify-content: center;
   color: $color-white;
 
-  &.light {
-    animation: lightBackground 200ms infinite;
+  //background-color: $color-white;
+
+  &.flashing {
+    animation: flashingBackground 200ms infinite;
 
     color: $color-white;
     background-color: $color-white;
 
-    .backdrop {
-      opacity: 1;
-    }
-
-    @keyframes lightBackground {
+    @keyframes flashingBackground {
       0% {
         background-color: $color-white;
       }
@@ -38,7 +36,7 @@
     }
   }
 
-  .header {
+  .landing-header {
     position: fixed;
     top: 32px;
     left: 0;
@@ -47,8 +45,9 @@
     justify-content: center;
     align-items: center;
     gap: 32px;
+    user-select: none;
 
-    .logo {
+    .landing-logo {
       max-width: 200px;
     }
 
@@ -99,77 +98,20 @@
     }
   }
 
-  .sidebar-button {
-    @include for-desktop {
-      display: none;
-    }
-
-    all: unset;
-    cursor: pointer;
-    position: fixed;
-    right: 32px;
-    top: 32px;
-    z-index: 1;
-
-    img {
-      max-height: 40px;
-      max-width: 8vw;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      filter: contrast(200%) brightness(200%);
-      z-index: 3;
-    }
-  }
-
-  .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background-image: url("./images/textures/dust.png");
-    filter: invert(1);
-    animation: changeBackground 0.5s steps(1) infinite alternate-reverse;
-    opacity: 0.5;
-    z-index: 5;
-    pointer-events: none;
-  }
-
-  .footer {
+  .landing-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: fixed;
-    gap: 16px;
+    gap: 24px;
     bottom: 32px;
     text-transform: uppercase;
     text-align: center;
     z-index: 1;
+    user-select: none;
 
-    @include for-desktop {
-      gap: 24px;
-      bottom: 96px;
-    }
-
-    h2 {
-      margin: 0;
-      padding: 0;
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-shadow: 2px 3px $color-black;
-
-      @include for-desktop {
-        font-size: 32px;
-      }
-    }
-
-    button {
+    a {
       all: unset;
       cursor: pointer;
       color: $color-red;
@@ -177,12 +119,13 @@
       font-weight: 400;
       background-color: $color-red;
       color: $color-white;
-      padding: 12px 0;
+      padding: 16px 0;
       border: 1px double $color-red;
       text-shadow: 2px 3px $color-black;
       font-size: 16px;
       width: 100%;
       text-align: center;
+      user-select: none;
 
       &:hover,
       &:focus,
@@ -198,58 +141,23 @@
         padding: 24px 0;
       }
     }
-  }
 
-  .monsters {
-    position: fixed;
-    bottom: -2px;
-  }
+    .landing-footer-tour {
+      max-width: 90vw;
 
-  .spidergang {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-    padding: 32px;
-    z-index: 5;
-
-    img {
-      object-fit: contain;
-      height: 100px;
-    }
-
-    @include for-phone-only {
-      transform: translateY(100%);
-      transition: transform 0.5s ease;
+      @include for-desktop {
+        max-width: 800px;
+      }
 
       img {
-        height: 120px;
-      }
-
-      &.open {
-        transform: translateY(0);
+        width: 100%;
+        filter: drop-shadow(1px 3px 0px $color-black);
       }
     }
   }
-}
 
-@keyframes changeBackground {
-  0% {
-    background-image: url("./images/textures/dust.png");
-  }
-  20% {
-    background-image: url("./images/textures/concrete-wall-2.png");
-  }
-  40% {
-    background-image: url("./images/textures/old-wall.png");
-  }
-  60% {
-    background-image: url("./images/textures/concrete-wall.png");
-  }
-  80% {
-    background-image: url("./images/textures/asfalt-dark.png");
-  }
-  100% {
-    background-image: url("./images/textures/old-wall.png");
+  .landing-monsters {
+    position: fixed;
+    bottom: 0;
   }
 }

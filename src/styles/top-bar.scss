@@ -1,0 +1,63 @@
+@import "./variables.scss";
+
+.top-bar {
+  position: fixed;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  user-select: none;
+
+  .top-bar-logo {
+    max-width: 200px;
+  }
+
+  button {
+    @include for-phone-only {
+      display: none;
+    }
+
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-shadow: 2px 3px $color-black;
+    cursor: pointer;
+
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-yellow;
+
+      &:before {
+        position: absolute;
+        content: " ";
+        background-color: $color-red;
+        width: 120%;
+        margin-left: -5%;
+        height: 100%;
+        box-shadow: 4px 4px 0px darken($color-red, 25%);
+      }
+
+      img,
+      span {
+        transform: scale(1.2);
+      }
+    }
+
+    img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+  }
+}
