@@ -118,6 +118,7 @@
     align-items: center;
     white-space: nowrap;
     user-select: none;
+    overflow: hidden;
 
     .city {
       color: $color-white;
@@ -130,6 +131,7 @@
       &:hover {
         color: $color-red;
         background-color: rgba($color-red, 0.25);
+        transform: scale(1.2);
 
         .date {
           color: $color-black;
