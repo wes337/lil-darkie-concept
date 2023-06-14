@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/lil-darkie-concept/static/css/main.5cf22726.css",
-    "main.js": "/lil-darkie-concept/static/js/main.b068ff25.js",
+    "main.css": "/lil-darkie-concept/static/css/main.f4059226.css",
+    "main.js": "/lil-darkie-concept/static/js/main.a0004dd6.js",
     "static/js/787.e997bd31.chunk.js": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js",
     "static/media/bottom.png": "/lil-darkie-concept/static/media/bottom.fff8372da0429511b163.png",
     "static/media/fall-tour-title.png": "/lil-darkie-concept/static/media/fall-tour-title.81372c21d7af86ff9e8f.png",
     "static/media/fall-tour-title-dark.png": "/lil-darkie-concept/static/media/fall-tour-title-dark.0469cf2748b1ab24b112.png",
+    "static/media/vote_guy.png": "/lil-darkie-concept/static/media/vote_guy.cc0712afb565b021c341.png",
     "static/media/plane-1.png": "/lil-darkie-concept/static/media/plane-1.694f63957dddb3861df9.png",
     "static/media/mushroom.png": "/lil-darkie-concept/static/media/mushroom.d493893f0dd40453f62e.png",
     "static/media/concrete-wall-2.png": "/lil-darkie-concept/static/media/concrete-wall-2.28844a728d06b7ed765b.png",
@@ -27,12 +28,12 @@
     "static/media/cig.png": "/lil-darkie-concept/static/media/cig.cd376386e2ae9d49be3a.png",
     "static/media/skull.png": "/lil-darkie-concept/static/media/skull.898310a283b63cf3874a.png",
     "index.html": "/lil-darkie-concept/index.html",
-    "main.5cf22726.css.map": "/lil-darkie-concept/static/css/main.5cf22726.css.map",
-    "main.b068ff25.js.map": "/lil-darkie-concept/static/js/main.b068ff25.js.map",
+    "main.f4059226.css.map": "/lil-darkie-concept/static/css/main.f4059226.css.map",
+    "main.a0004dd6.js.map": "/lil-darkie-concept/static/js/main.a0004dd6.js.map",
     "787.e997bd31.chunk.js.map": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cf22726.css",
-    "static/js/main.b068ff25.js"
+    "static/css/main.f4059226.css",
+    "static/js/main.a0004dd6.js"
   ]
 }
