@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/lil-darkie-concept/static/css/main.a44e46ac.css",
-    "main.js": "/lil-darkie-concept/static/js/main.128040cf.js",
+    "main.css": "/lil-darkie-concept/static/css/main.5cf22726.css",
+    "main.js": "/lil-darkie-concept/static/js/main.b068ff25.js",
     "static/js/787.e997bd31.chunk.js": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js",
-    "static/media/tour-full.png": "/lil-darkie-concept/static/media/tour-full.d0b38e73198fe4f13e42.png",
+    "static/media/bottom.png": "/lil-darkie-concept/static/media/bottom.fff8372da0429511b163.png",
+    "static/media/fall-tour-title.png": "/lil-darkie-concept/static/media/fall-tour-title.81372c21d7af86ff9e8f.png",
     "static/media/fall-tour-title-dark.png": "/lil-darkie-concept/static/media/fall-tour-title-dark.0469cf2748b1ab24b112.png",
     "static/media/plane-1.png": "/lil-darkie-concept/static/media/plane-1.694f63957dddb3861df9.png",
     "static/media/mushroom.png": "/lil-darkie-concept/static/media/mushroom.d493893f0dd40453f62e.png",
     "static/media/concrete-wall-2.png": "/lil-darkie-concept/static/media/concrete-wall-2.28844a728d06b7ed765b.png",
     "static/media/plane-2.png": "/lil-darkie-concept/static/media/plane-2.ba8173f616a9f7def9df.png",
     "static/media/dust.png": "/lil-darkie-concept/static/media/dust.5e79dee42ca9cf9ce81a.png",
+    "static/media/end.png": "/lil-darkie-concept/static/media/end.d8a23b5f4ad90107d176.png",
     "static/media/concrete-wall.png": "/lil-darkie-concept/static/media/concrete-wall.26941afecc5d52c56e41.png",
     "static/media/old-wall.png": "/lil-darkie-concept/static/media/old-wall.7da1af8aae31d9cee3db.png",
     "static/media/face-1.png": "/lil-darkie-concept/static/media/face-1.273ca17f5168c6ef27c4.png",
@@ -25,12 +27,12 @@
     "static/media/cig.png": "/lil-darkie-concept/static/media/cig.cd376386e2ae9d49be3a.png",
     "static/media/skull.png": "/lil-darkie-concept/static/media/skull.898310a283b63cf3874a.png",
     "index.html": "/lil-darkie-concept/index.html",
-    "main.a44e46ac.css.map": "/lil-darkie-concept/static/css/main.a44e46ac.css.map",
-    "main.128040cf.js.map": "/lil-darkie-concept/static/js/main.128040cf.js.map",
+    "main.5cf22726.css.map": "/lil-darkie-concept/static/css/main.5cf22726.css.map",
+    "main.b068ff25.js.map": "/lil-darkie-concept/static/js/main.b068ff25.js.map",
     "787.e997bd31.chunk.js.map": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a44e46ac.css",
-    "static/js/main.128040cf.js"
+    "static/css/main.5cf22726.css",
+    "static/js/main.b068ff25.js"
   ]
 }
