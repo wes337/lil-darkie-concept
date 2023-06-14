@@ -17,7 +17,7 @@ import "../styles/mobile-nav.scss";
 
 export default function MobileNav() {
   const location = useLocation();
-  const { mobileNavOpen, setMobileNavOpen } = useStore();
+  const { mobileNavOpen, setMobileNavOpen, sticky } = useStore();
 
   useEffect(() => {
     setMobileNavOpen(false);
@@ -26,7 +26,7 @@ export default function MobileNav() {
   return (
     <>
       <button
-        className="mobile-nav-button"
+        className={`mobile-nav-button${sticky ? " sticky" : ""}`}
         onClick={() => setMobileNavOpen(true)}
       >
         <img src={menu} alt="" />

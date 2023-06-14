@@ -10,9 +10,13 @@
   align-items: center;
   gap: 32px;
   user-select: none;
+  z-index: 2;
+
+  transition: top 0.2s ease;
 
   .top-bar-logo {
     max-width: 200px;
+    height: 100%;
 
     img {
       width: 100%;
@@ -20,6 +24,14 @@
 
     &:hover {
       transform: rotate(-5deg) scale(1.2);
+    }
+  }
+
+  &.sticky {
+    top: 0px;
+
+    .top-bar-logo {
+      margin-top: 2px;
     }
   }
 
@@ -70,7 +82,9 @@
   }
 
   &.light {
-    background-color: $color-white;
+    @include for-phone-only {
+      background-color: transparent;
+    }
 
     a,
     button {
@@ -85,5 +99,20 @@
         text-shadow: 2px 3px $color-black;
       }
     }
+  }
+}
+
+.top-bar-back {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 60px;
+  background-color: rgba($color-red, 1);
+  z-index: 1;
+  transition: transform 0.2s ease;
+  transform: translateY(-100%);
+
+  &.sticky {
+    transform: translateY(0);
   }
 }

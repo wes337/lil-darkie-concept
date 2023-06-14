@@ -13,6 +13,8 @@ const useStore = create((set) => ({
   },
   flashing: false,
   setFlashing: (flashing) => set(() => ({ flashing })),
+  sticky: false,
+  setSticky: (sticky) => set(() => ({ sticky })),
   lightMode: false,
   setLightMode: (lightMode) => {
     if (lightMode) {
