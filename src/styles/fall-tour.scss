@@ -60,26 +60,122 @@
     text-align: center;
   }
 
-  .city {
-    font-size: 24px;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-
   .tour-date {
     display: flex;
     flex-direction: column;
     padding: 8px;
     gap: 8px;
+    width: 80%;
+    overflow: hidden;
+  }
+
+  .city {
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $color-white;
+    text-shadow: 4px 4px 0px $color-black;
+  }
+
+  .date {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .venue {
+    font-style: italic;
+    font-weight: 200;
+    font-size: 18px;
   }
 
   .buy {
     all: unset;
     cursor: pointer;
-    padding: 8px;
+    padding: 16px 0;
     text-transform: uppercase;
     font-weight: 700;
     color: $color-white;
     background-color: $color-blue;
+    font-size: 24px;
+    letter-spacing: 2px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 4px 4px 0px $color-black;
+
+    text-shadow: 1px 1px 0px $color-black, 2px 2px 0px $color-black,
+      3px 3px 0px $color-black, 2px 2px 0px $color-black,
+      3px 0px 0px $color-black;
+  }
+
+  .tour-cities {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 32px;
+    text-align: center;
+    gap: 32px;
+    justify-content: space-evenly;
+    align-items: center;
+    white-space: nowrap;
+    user-select: none;
+
+    .city {
+      color: $color-white;
+      text-shadow: 1px 1px 0px $color-black, 2px 2px 0px $color-black,
+        3px 3px 0px $color-black;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 0;
+
+      &:hover {
+        color: $color-red;
+        background-color: rgba($color-red, 0.25);
+
+        .date {
+          color: $color-black;
+        }
+      }
+    }
+
+    .date {
+      color: $color-red;
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-shadow: none;
+    }
+
+    @include for-phone-only {
+      grid-template-columns: repeat(2, auto);
+      gap: 16px 0;
+      padding: 16px 0;
+
+      .city {
+        font-size: 1.2rem;
+
+        .date {
+          font-weight: 400;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .vote-guy {
+    position: absolute;
+    bottom: 0;
+    max-width: 800px;
+    z-index: 0;
+    pointer-events: none;
+    left: -25%;
+
+    img {
+      width: 100%;
+    }
+
+    @include for-phone-only {
+      mix-blend-mode: multiply;
+      opacity: 0.75;
+      left: 0;
+    }
   }
 }
