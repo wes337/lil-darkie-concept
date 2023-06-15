@@ -10,6 +10,21 @@ $color-yellow: #f6c601;
 
 $screen-size-xs: 500px;
 $screen-size-sm: 1100px;
+$screen-size-lg: 1920px;
+
+$font-size-xs: 10px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-xxl: 32px;
+
+$space-xxs: 2px;
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
 
 @mixin for-phone-only {
   @media screen and (max-width: $screen-size-sm) {
