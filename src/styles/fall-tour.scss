@@ -23,7 +23,10 @@
     text-align: right;
 
     @include for-phone-only {
-      font-size: 14px;
+      bottom: 8px;
+      right: 16px;
+      font-size: 10px;
+      font-weight: 700;
     }
   }
 

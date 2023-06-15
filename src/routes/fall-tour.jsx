@@ -42,7 +42,7 @@ export default function FallTour() {
             ${
               isMobileSizedScreen()
                 ? Math.floor(scroll / 4)
-                : Math.floor(scroll + 5 * 2)
+                : Math.floor(scroll * 0.75)
             }px))`,
         }}
       />

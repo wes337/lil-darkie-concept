@@ -25,9 +25,13 @@
 
     .logo-primary {
       position: absolute;
-      top: -16px;
+      top: 0;
       left: 0;
       opacity: 1;
+
+      @include for-phone-only {
+        top: -16px;
+      }
     }
 
     .logo-yellow {
