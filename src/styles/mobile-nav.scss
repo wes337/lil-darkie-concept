@@ -132,7 +132,7 @@
     letter-spacing: -0.5px;
     text-shadow: 2px 3px $color-black;
     margin-top: auto;
-    padding-bottom: 8px;
+    padding-bottom: calc(env(safe-area-inset-bottom) + $space-xl);
     color: $color-white;
   }
 }
