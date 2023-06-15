@@ -10,7 +10,7 @@
   position: fixed;
   right: 32px;
   top: 32px;
-  z-index: 3;
+  z-index: 4;
 
   transition: all 0.2s ease;
 
@@ -28,7 +28,6 @@
   &:focus,
   &:active {
     filter: contrast(200%) brightness(200%);
-    z-index: 3;
   }
 }
 
