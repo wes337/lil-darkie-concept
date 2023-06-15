@@ -12,7 +12,11 @@ export default function SlideShow({ images }) {
     }
 
     const image = document.getElementById(`image-${selectedImage}`);
-    image.scrollIntoView({ behavior: "smooth" });
+    image.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "center",
+    });
   }, [selectedImage, stopAutoScroll]);
 
   useEffect(() => {
