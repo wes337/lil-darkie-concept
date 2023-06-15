@@ -108,22 +108,40 @@
   }
 
   .city {
+    all: unset;
+    cursor: pointer;
     font-size: 32px;
     font-weight: 800;
     text-transform: uppercase;
     color: $color-white;
     text-shadow: 4px 4px 0px $color-black;
+    position: relative;
+
+    .venue {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 14px;
+      z-index: 9999;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      .venue {
+        display: flex;
+        font-weight: 800;
+        letter-spacing: -1.5px;
+        transform: rotate(10deg);
+        color: lighten($color-blue, 10%);
+      }
+    }
   }
 
   .date {
     font-size: 18px;
     font-weight: 500;
-  }
-
-  .venue {
-    font-style: italic;
-    font-weight: 200;
-    font-size: 18px;
   }
 
   .buy {
