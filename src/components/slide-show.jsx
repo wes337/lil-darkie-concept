@@ -30,35 +30,34 @@ export default function SlideShow({ images }) {
     return () => clearInterval(interval);
   }, [images]);
 
+  const clearResetAutoScrollTimeout = () => {
+    clearTimeout(resetAutoScrollTimer.current);
+    setStopAutoScroll(true);
+    resetAutoScrollTimer.current = setTimeout(() => {
+      setStopAutoScroll(false);
+    }, 10000);
+  };
+
+  const onClickImage = (i) => {
+    setSelectedImage(i);
+    clearResetAutoScrollTimeout();
+    const image = document.getElementById(`image-${i}`);
+    image.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "center",
+    });
+  };
+
   return (
     <div className="slide-show">
       <h1>USA 2023 Tour Photos</h1>
       <div className="slide-show-selected-image">
         <img src={images[selectedImage]} alt="" />
       </div>
-      <div
-        className="slide-show-images"
-        onScroll={() => {
-          clearTimeout(resetAutoScrollTimer.current);
-          setStopAutoScroll(true);
-          resetAutoScrollTimer.current = setTimeout(() => {
-            setStopAutoScroll(false);
-          }, 10000);
-        }}
-      >
+      <div className="slide-show-images" onScroll={clearResetAutoScrollTimeout}>
         {images.map((image, i) => (
-          <button
-            key={image}
-            id={`image-${i}`}
-            onClick={() => {
-              clearTimeout(resetAutoScrollTimer.current);
-              setSelectedImage(i);
-              setStopAutoScroll(true);
-              resetAutoScrollTimer.current = setTimeout(() => {
-                setStopAutoScroll(false);
-              }, 10000);
-            }}
-          >
+          <button key={image} id={`image-${i}`} onClick={() => onClickImage(i)}>
             <img
               src={image}
               alt=""
