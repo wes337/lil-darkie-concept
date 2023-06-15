@@ -1,0 +1,91 @@
+@import "./variables.scss";
+
+.slide-show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-height: -webkit-fill-available;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+
+  h1 {
+    margin: 0;
+    text-transform: uppercase;
+    color: $color-yellow;
+    text-align: center;
+    text-shadow: 1px 1px 0px $color-black, 2px 2px 0px $color-black,
+      3px 3px 0px $color-black;
+
+    @include for-phone-only {
+      font-size: $font-size-xl;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  .slide-show-selected-image {
+    width: calc(100vw - $space-xl);
+    margin: $space-md;
+    background-color: rgba($color-gray, 0.75);
+    border: 2px solid $color-red;
+
+    img {
+      width: 100%;
+      height: 40vh;
+      object-fit: contain;
+    }
+  }
+
+  .slide-show-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: calc(100vw - $space-xl);
+    overflow-x: hidden;
+    overflow-y: auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: $space-md;
+    padding: $space-md;
+
+    button {
+      all: unset;
+      cursor: pointer;
+    }
+
+    img {
+      max-height: 120px;
+      width: 100%;
+      object-fit: cover;
+      border: 2px solid transparent;
+
+      &.selected {
+        border: 2px solid $color-red;
+      }
+    }
+
+    @include for-desktop {
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      max-width: 1200px;
+
+      img {
+        width: 200px;
+      }
+    }
+  }
+
+  @include for-desktop {
+    .slide-show-selected-image {
+      width: auto;
+
+      img {
+        height: 60vh;
+      }
+    }
+  }
+}
