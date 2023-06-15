@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-// import { Link } from "react-router-dom";
 import useStore from "../store";
 import { isMobileSizedScreen } from "../utils";
 import title from "../images/tour/fall-tour-title.png";
@@ -46,11 +45,6 @@ export default function FallTour() {
                 : Math.floor(scroll + 5 * 2)
             }px))`,
         }}
-        // style={{
-        //   marginTop: isMobileSizedScreen()
-        //     ? Math.floor(scroll * -1) * 1.2
-        //     : Math.floor(scroll * 1.75),
-        // }}
       />
       <img className="bottom" src={bottom} alt="" />
       <div className={`panel${scroll >= 100 ? " scroll" : ""}`}>
@@ -76,20 +70,11 @@ export default function FallTour() {
             );
           })}
         </div>
-        {/* <div className="grid">
-          {tourDates.map(({ date, city, venue, ticketLink }) => {
-            return (
-              <div className="tour-date" key={date}>
-                <div className="city">{city}</div>
-                <div className="date">{date}</div>
-                <div className="venue">@ {venue}</div>
-                <Link className="buy" to={ticketLink}>
-                  Buy Tickets
-                </Link>
-              </div>
-            );
-          })}
-        </div> */}
+        <div className="copyright">
+          Copyright © 2023 Lil Darkie
+          <br />
+          All Rights Reserved
+        </div>
       </div>
     </div>
   );

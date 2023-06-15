@@ -15,6 +15,18 @@
     width: 100%;
   }
 
+  .copyright {
+    position: absolute;
+    bottom: 16px;
+    right: 32px;
+    font-weight: 600;
+    text-align: right;
+
+    @include for-phone-only {
+      font-size: 14px;
+    }
+  }
+
   .title {
     max-width: 800px;
     margin: auto;
@@ -172,7 +184,7 @@
       text-shadow: none;
     }
 
-    @media screen and (max-width: 900px) {
+    @include for-phone-only {
       grid-template-columns: repeat(2, auto);
       gap: 16px 0;
       padding: 8px 0;
@@ -228,14 +240,36 @@
     }
   }
 
-  @media screen and (min-width: 800px) and (max-height: 800px) {
+  @include for-tablet {
     .title {
       max-width: 650px;
+      z-index: 1;
+      filter: drop-shadow(4px 4px 0 $color-yellow);
+      margin-bottom: -2%;
     }
 
     .bottom {
-      max-width: 600px;
+      padding-top: 0px;
+      max-width: auto;
+      width: 100vw;
+      max-width: 800px;
       margin: auto;
+      transform: translateX(0vw);
+      margin-bottom: -2px;
+      z-index: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .end {
+      position: fixed;
+      top: -10%;
+      left: 0;
+      width: 100%;
+      max-width: 15vw;
+      transform: translateY(0%);
     }
   }
 }
