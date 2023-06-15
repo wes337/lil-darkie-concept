@@ -6,7 +6,7 @@
   margin: auto;
   background-color: $color-white;
   margin-top: 100px;
-
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,10 +18,16 @@
   .title {
     max-width: 800px;
     margin: auto;
-    z-index: 1;
+    z-index: 0;
+    will-change: transform;
+    transition: all 0.1s ease;
 
     @include for-phone-only {
+      z-index: 0;
+      position: fixed;
+      top: 90px;
       max-width: 95vw;
+      margin-bottom: -15px;
     }
   }
 
@@ -29,6 +35,19 @@
     max-width: 1200px;
     margin: auto;
     margin-bottom: -25px;
+    z-index: 1;
+
+    @include for-phone-only {
+      padding-top: 150px;
+      max-width: auto;
+      width: 110vw;
+      transform: translateX(-5vw);
+      margin-bottom: -2px;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   .end {
@@ -37,9 +56,13 @@
     top: 2%;
     width: 100%;
     max-width: 10vw;
+    will-change: margin-top;
+    transition: all 0.1s ease;
 
     @include for-phone-only {
-      top: 11%;
+      position: fixed;
+      top: 0;
+      transform: translateY(300%);
       max-width: 20vw;
     }
   }
@@ -51,6 +74,7 @@
     max-width: 1200px;
     margin: auto;
     word-break: break-all;
+    z-index: 2;
   }
 
   .grid {
@@ -128,12 +152,15 @@
         3px 3px 0px $color-black;
       font-size: 2rem;
       cursor: pointer;
-      z-index: 0;
+      z-index: 1;
 
       &:hover {
         color: $color-red;
         background-color: rgba($color-red, 0.25);
-        transform: scale(1.2);
+
+        @include for-desktop {
+          transform: scale(1.2);
+        }
 
         .date {
           color: $color-black;
@@ -148,17 +175,20 @@
       text-shadow: none;
     }
 
-    @include for-phone-only {
+    @media screen and (max-width: 900px) {
       grid-template-columns: repeat(2, auto);
       gap: 16px 0;
-      padding: 16px 0;
+      padding: 8px 0;
 
       .city {
         font-size: 1.2rem;
+        padding: 8px;
+        background-color: rgba($color-yellow, 0.5);
 
         .date {
           font-weight: 400;
           font-size: 0.8rem;
+          mix-blend-mode: multiply;
         }
       }
     }
@@ -166,7 +196,7 @@
 
   .vote-guy {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     max-width: 800px;
     z-index: 0;
     pointer-events: none;
@@ -177,9 +207,27 @@
     }
 
     @include for-phone-only {
-      mix-blend-mode: multiply;
-      opacity: 0.75;
-      left: 0;
+      display: none;
+    }
+  }
+
+  .paratrooper {
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    max-width: 800px;
+    z-index: 0;
+    pointer-events: none;
+
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+
+    img {
+      width: 100%;
+    }
+
+    @include for-desktop {
+      display: none;
     }
   }
 
