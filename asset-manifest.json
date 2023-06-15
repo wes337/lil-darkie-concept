@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lil-darkie-concept/static/css/main.2148f157.css",
-    "main.js": "/lil-darkie-concept/static/js/main.b8001ca2.js",
+    "main.css": "/lil-darkie-concept/static/css/main.f4d22a18.css",
+    "main.js": "/lil-darkie-concept/static/js/main.b04e349f.js",
     "static/js/787.e997bd31.chunk.js": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js",
     "static/media/paratrooper.png": "/lil-darkie-concept/static/media/paratrooper.cf7608f7ac84866a21bd.png",
     "static/media/bottom.png": "/lil-darkie-concept/static/media/bottom.fff8372da0429511b163.png",
@@ -29,12 +29,12 @@
     "static/media/cig.png": "/lil-darkie-concept/static/media/cig.cd376386e2ae9d49be3a.png",
     "static/media/skull.png": "/lil-darkie-concept/static/media/skull.898310a283b63cf3874a.png",
     "index.html": "/lil-darkie-concept/index.html",
-    "main.2148f157.css.map": "/lil-darkie-concept/static/css/main.2148f157.css.map",
-    "main.b8001ca2.js.map": "/lil-darkie-concept/static/js/main.b8001ca2.js.map",
+    "main.f4d22a18.css.map": "/lil-darkie-concept/static/css/main.f4d22a18.css.map",
+    "main.b04e349f.js.map": "/lil-darkie-concept/static/js/main.b04e349f.js.map",
     "787.e997bd31.chunk.js.map": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2148f157.css",
-    "static/js/main.b8001ca2.js"
+    "static/css/main.f4d22a18.css",
+    "static/js/main.b04e349f.js"
   ]
 }
