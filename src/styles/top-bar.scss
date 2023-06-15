@@ -104,9 +104,9 @@
 
 .top-bar-back {
   position: fixed;
-  top: 0px;
+  top: -2px;
   width: 100vw;
-  height: 60px;
+  height: 62px;
   background-color: rgba($color-red, 1);
   z-index: 3;
   transition: transform 0.2s ease;

@@ -27,7 +27,9 @@ export default function FallTour() {
         alt=""
         style={{
           transform: `translateY(${
-            isMobileSizedScreen() ? (scroll - 2) * -1 : scroll + 5 * 2
+            isMobileSizedScreen()
+              ? Math.floor((scroll - 2) * -1)
+              : Math.floor(scroll + 5 * 2)
           }px)`,
         }}
       />
@@ -36,10 +38,19 @@ export default function FallTour() {
         src={end}
         alt=""
         style={{
-          marginTop: isMobileSizedScreen()
-            ? Math.floor(scroll * -1) * 1.2
-            : Math.floor(scroll * 1.75),
+          transform: `translateY(calc(
+            ${isMobileSizedScreen() ? "280%" : "100%"} +
+            ${
+              isMobileSizedScreen()
+                ? Math.floor(scroll)
+                : Math.floor(scroll + 5 * 2)
+            }px))`,
         }}
+        // style={{
+        //   marginTop: isMobileSizedScreen()
+        //     ? Math.floor(scroll * -1) * 1.2
+        //     : Math.floor(scroll * 1.75),
+        // }}
       />
       <img className="bottom" src={bottom} alt="" />
       <div className={`panel${scroll >= 100 ? " scroll" : ""}`}>

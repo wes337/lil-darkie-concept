@@ -51,17 +51,14 @@
   }
 
   .end {
-    position: absolute;
+    position: fixed;
+    top: 0;
     left: 0;
-    top: 2%;
     width: 100%;
     max-width: 10vw;
-    will-change: margin-top;
-    transition: all 0.1s ease;
+    transform: translateY(100%);
 
     @include for-phone-only {
-      position: fixed;
-      top: 0;
       transform: translateY(300%);
       max-width: 20vw;
     }
