@@ -26,8 +26,9 @@ export default function TopBar() {
           <img src={skull} alt="" />
           <span>Gallery</span>
         </Link>
-        <Link to="/" className="top-bar-logo">
-          <img src={sticky ? logoYellow : logo} alt="Lil Darkie" />
+        <Link to="/" className={`top-bar-logo${sticky ? " sticky" : ""}`}>
+          <img className="logo-yellow" src={logoYellow} alt="Lil Darkie" />
+          <img className="logo-primary" src={logo} alt="Lil Darkie" />
         </Link>
         <Link to="/upcoming-shows">
           <img src={grave} alt="" />

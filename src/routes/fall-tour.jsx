@@ -28,7 +28,7 @@ export default function FallTour() {
         style={{
           transform: `translateY(${
             isMobileSizedScreen()
-              ? Math.floor((scroll - 2) * -1)
+              ? Math.min(Math.floor((scroll - 2) * -1), 0)
               : Math.floor(scroll + 5 * 2)
           }px)`,
         }}
@@ -42,7 +42,7 @@ export default function FallTour() {
             ${isMobileSizedScreen() ? "280%" : "100%"} +
             ${
               isMobileSizedScreen()
-                ? Math.floor(scroll)
+                ? Math.floor(scroll / 4)
                 : Math.floor(scroll + 5 * 2)
             }px))`,
         }}
