@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useStore from "../store";
 import logo from "../images/logo-small.webp";
@@ -10,20 +9,7 @@ import grave from "../images/icons/grave.png";
 import "../styles/top-bar.scss";
 
 export default function TopBar() {
-  const { lightMode, sticky, setSticky } = useStore();
-
-  useEffect(() => {
-    const onScroll = () => {
-      const scrollY = window.scrollY;
-      setSticky(scrollY >= 32);
-    };
-
-    onScroll();
-
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scoll", onScroll);
-  }, [setSticky]);
+  const { lightMode, sticky } = useStore();
 
   return (
     <>

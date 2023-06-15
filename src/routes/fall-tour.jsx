@@ -9,7 +9,7 @@ import tourDates from "../data/fall-tour-dates.json";
 import "../styles/fall-tour.scss";
 
 export default function FallTour() {
-  const { setLightMode } = useStore();
+  const { setLightMode, scroll } = useStore();
 
   useEffect(() => {
     setLightMode(true);
@@ -19,10 +19,10 @@ export default function FallTour() {
 
   return (
     <div className="fall-tour">
-      <img className="end" src={end} alt="" />
       <img className="title" src={title} alt="" />
+      <img className="end" src={end} alt="" />
       <img className="bottom" src={bottom} alt="" />
-      <div className="panel">
+      <div className={`panel${scroll >= 100 ? " scroll" : ""}`}>
         <div className="vote-guy">
           <img src={voteGuy} alt="" />
         </div>

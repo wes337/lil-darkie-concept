@@ -18,6 +18,7 @@
   .title {
     max-width: 800px;
     margin: auto;
+    z-index: 1;
 
     @include for-phone-only {
       max-width: 95vw;
@@ -25,19 +26,20 @@
   }
 
   .bottom {
-    margin-bottom: -10px;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: -25px;
   }
 
   .end {
     position: absolute;
     left: 0;
-    top: 3%;
+    top: 2%;
     width: 100%;
     max-width: 10vw;
 
     @include for-phone-only {
+      top: 11%;
       max-width: 20vw;
     }
   }
@@ -178,6 +180,19 @@
       mix-blend-mode: multiply;
       opacity: 0.75;
       left: 0;
+    }
+  }
+
+  @media screen and (min-width: 800px) and (max-height: 800px) {
+    background-color: $color-red;
+
+    .title {
+      max-width: 600px;
+    }
+
+    .bottom {
+      max-width: 600px;
+      margin: auto;
     }
   }
 }

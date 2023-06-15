@@ -15,6 +15,8 @@ const useStore = create((set) => ({
   setFlashing: (flashing) => set(() => ({ flashing })),
   sticky: false,
   setSticky: (sticky) => set(() => ({ sticky })),
+  scroll: 0,
+  setScroll: (scroll) => set(() => ({ scroll })),
   lightMode: false,
   setLightMode: (lightMode) => {
     if (lightMode) {
