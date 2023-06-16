@@ -20,3 +20,11 @@ export function throttle(callback, limit) {
     }
   };
 }
+
+export function formateDate(dateString) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    weekday: "short",
+  }).format(new Date(dateString));
+}

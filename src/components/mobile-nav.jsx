@@ -17,11 +17,12 @@ import "../styles/mobile-nav.scss";
 
 export default function MobileNav() {
   const location = useLocation();
-  const { mobileNavOpen, setMobileNavOpen, sticky } = useStore();
+  const { mobileNavOpen, setMobileNavOpen, sticky, setFlashing } = useStore();
 
   useEffect(() => {
     setMobileNavOpen(false);
-  }, [location, setMobileNavOpen]);
+    setFlashing(false);
+  }, [location, setFlashing, setMobileNavOpen]);
 
   return (
     <>

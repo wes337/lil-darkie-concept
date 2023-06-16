@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useStore from "../store";
-import { isMobileSizedScreen } from "../utils";
+import { isMobileSizedScreen, formateDate } from "../utils";
 import title from "../images/tour/fall-tour-title.png";
 import end from "../images/tour/end.png";
 import bottom from "../images/tour/bottom.png";
@@ -60,13 +60,7 @@ export default function FallTour() {
             return (
               <Link className="city" key={date} to={ticketLink} target="_blank">
                 {city.split(",")[0].trim()}
-                <div className="date">
-                  {new Intl.DateTimeFormat("en-US", {
-                    month: "short",
-                    day: "numeric",
-                    weekday: "short",
-                  }).format(new Date(date))}
-                </div>
+                <div className="date">{formateDate(date)}</div>
                 <div className="venue">@ {venue}</div>
               </Link>
             );

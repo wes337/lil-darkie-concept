@@ -10,7 +10,8 @@
   background-image: url("../images/textures/dust.png");
   filter: invert(1);
   animation: changeBackground 0.5s steps(1) infinite alternate-reverse;
-  opacity: 0.4;
+  background-repeat: repeat;
+  opacity: 0.5;
   z-index: 5;
   pointer-events: none;
 
