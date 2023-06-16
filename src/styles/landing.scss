@@ -2,12 +2,14 @@
 
 .landing {
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   max-height: -webkit-fill-available;
   align-items: center;
   justify-content: center;
   color: $color-white;
+  overflow-x: hidden;
 
   &.flashing {
     animation: flashingBackground 200ms infinite;
@@ -34,76 +36,14 @@
     }
   }
 
-  .landing-header {
-    position: fixed;
-    top: 32px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    user-select: none;
-
-    .landing-logo {
-      max-width: 200px;
-    }
-
-    button {
-      @include for-phone-only {
-        display: none;
-      }
-
-      all: unset;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 600;
-      text-shadow: 2px 3px $color-black;
-      cursor: pointer;
-
-      position: relative;
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: $color-yellow;
-
-        &:before {
-          position: absolute;
-          content: " ";
-          background-color: $color-red;
-          width: 120%;
-          margin-left: -5%;
-          height: 100%;
-          box-shadow: 4px 4px 0px darken($color-red, 25%);
-        }
-
-        img,
-        span {
-          transform: scale(1.2);
-        }
-      }
-
-      img {
-        width: 48px;
-        height: 48px;
-        object-fit: contain;
-      }
-    }
-  }
-
   .landing-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed;
     gap: 24px;
-    bottom: 32px;
+    margin-bottom: 32px;
+
     text-transform: uppercase;
     text-align: center;
     z-index: 1;
@@ -156,6 +96,6 @@
 
   .landing-monsters {
     position: fixed;
-    bottom: 0;
+    bottom: calc($space-xs * -1);
   }
 }
