@@ -1,4 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import frameLeft from "../images/frame-left-small.png";
+import frameRight from "../images/frame-right-small.png";
+import frameBottom from "../images/frame-bottom-small.png";
 import "../styles/slide-show.scss";
 
 export default function SlideShow({ images }) {
@@ -57,7 +60,14 @@ export default function SlideShow({ images }) {
     <div className="slide-show">
       <h1>USA 2023 Tour Photos</h1>
       <div className="slide-show-selected-image">
-        <img src={images[selectedImage]} alt="" />
+        <img className="frame-left" src={frameLeft} alt="" />
+        <img
+          className="slide-show-main-image"
+          src={images[selectedImage]}
+          alt=""
+        />
+        <img className="frame-right" src={frameRight} alt="" />
+        <img className="frame-bottom" src={frameBottom} alt="" />
       </div>
       <div className="slide-show-images" onScroll={clearResetAutoScrollTimeout}>
         {images.map((image, i) => (
