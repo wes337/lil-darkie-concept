@@ -3,10 +3,33 @@ import { Link } from "react-router-dom";
 import camo from "../images/camo.png";
 import voices from "../images/voices.png";
 import boom from "../images/boom.png";
-import upcomingShows from "../data/upcoming-shows.json";
+import upcomingShowsData from "../data/upcoming-shows.json";
 import { formateDate, isMobileSizedScreen } from "../utils";
 import useStore from "../store";
 import "../styles/upcoming-shows.scss";
+
+const allShows = upcomingShowsData.map((show) => {
+  const date = new Date(show.date);
+  const isOver = date.getTime() < new Date().getTime();
+
+  return {
+    ...show,
+    date,
+    isOver,
+  };
+});
+
+const previousShows = allShows
+  .filter((show) => show.isOver)
+  .sort((a, b) => {
+    return b.date - a.date;
+  });
+
+const upcomingShows = allShows
+  .filter((show) => !show.isOver)
+  .sort((a, b) => {
+    return a.date - b.date;
+  });
 
 export default function UpcomingShows() {
   const { flashing, setLightMode } = useStore();
@@ -50,40 +73,33 @@ export default function UpcomingShows() {
             src={voices}
             alt=""
           />
-          {upcomingShows
-            .sort((a, b) => {
-              return new Date(b.date) - new Date(a.date);
-            })
-            .map((upcomingShow) => {
-              const isOver =
-                new Date(upcomingShow.date).getTime() < new Date().getTime();
-
-              return (
-                <div
-                  key={upcomingShow.date}
-                  className={`upcoming-show${isOver ? " over" : ""}`}
-                >
-                  <div className="upcoming-show-city">{upcomingShow.city}</div>
-                  <div className="upcoming-show-venue">
-                    {upcomingShow.venue.match(/@/) ? "" : "@"}
-                    {upcomingShow.venue}
-                  </div>
-                  <div className="upcoming-show-date">
-                    {formateDate(upcomingShow.date)}
-                  </div>
-                  <Link
-                    className={`upcoming-show-tickets${
-                      isOver ? " disabled" : ""
-                    }`}
-                    to={upcomingShow.ticketLink}
-                    target="_blank"
-                  >
-                    Tickets
-                    <img className="boom" src={boom} alt="" />
-                  </Link>
+          {[...upcomingShows, ...previousShows].map((upcomingShow) => {
+            return (
+              <div
+                key={upcomingShow.date}
+                className={`upcoming-show${upcomingShow.isOver ? " over" : ""}`}
+              >
+                <div className="upcoming-show-city">{upcomingShow.city}</div>
+                <div className="upcoming-show-venue">
+                  {upcomingShow.venue.match(/@/) ? "" : "@"}
+                  {upcomingShow.venue}
                 </div>
-              );
-            })}
+                <div className="upcoming-show-date">
+                  {formateDate(upcomingShow.date)}
+                </div>
+                <Link
+                  className={`upcoming-show-tickets${
+                    upcomingShow.isOver ? " disabled" : ""
+                  }`}
+                  to={upcomingShow.ticketLink}
+                  target="_blank"
+                >
+                  Tickets
+                  <img className="boom" src={boom} alt="" />
+                </Link>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
