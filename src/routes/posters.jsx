@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef } from "react";
 import Hammer from "hammerjs";
 import "../styles/posters.scss";
 
