@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import useStore from "../store";
 import TopBar from "../components/top-bar";
 import MobileNav from "../components/mobile-nav";
 import Backdrop from "../components/backdrop";
-import useStore from "../store";
+import Spotify from "../components/spotify";
 
 export default function Root() {
   const { setSticky, setScroll } = useStore();
@@ -24,6 +25,7 @@ export default function Root() {
 
   return (
     <>
+      <Spotify />
       <TopBar />
       <Outlet />
       <MobileNav />
