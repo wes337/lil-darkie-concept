@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useStore from "../store";
 import logo from "../images/logo-small.webp";
 import logoYellow from "../images/logo-yellow.png";
@@ -9,7 +9,18 @@ import grave from "../images/icons/grave.png";
 import "../styles/top-bar.scss";
 
 export default function TopBar() {
-  const { lightMode, sticky } = useStore();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { lightMode, sticky, setBloodTransition } = useStore();
+
+  const onClickLogo = () => {
+    if (location.pathname === "/") {
+      return;
+    }
+
+    setBloodTransition(true);
+    setTimeout(() => navigate("/"), 200);
+  };
 
   return (
     <>
@@ -26,10 +37,13 @@ export default function TopBar() {
           <img src={skull} alt="" />
           <span>Gallery</span>
         </Link>
-        <Link to="/" className={`top-bar-logo${sticky ? " sticky" : ""}`}>
+        <button
+          onClick={onClickLogo}
+          className={`top-bar-logo${sticky ? " sticky" : ""}`}
+        >
           <img className="logo-yellow" src={logoYellow} alt="Lil Darkie" />
           <img className="logo-primary" src={logo} alt="Lil Darkie" />
-        </Link>
+        </button>
         <Link to="/upcoming-shows">
           <img src={grave} alt="" />
           <span>Upcoming Shows</span>

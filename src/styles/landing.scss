@@ -49,7 +49,8 @@
     z-index: 1;
     user-select: none;
 
-    a {
+    a,
+    button {
       all: unset;
       cursor: pointer;
       color: $color-red;

@@ -5,6 +5,7 @@ import TopBar from "../components/top-bar";
 import MobileNav from "../components/mobile-nav";
 import Backdrop from "../components/backdrop";
 import Spotify from "../components/spotify";
+import Blood from "../components/blood";
 
 export default function Root() {
   const { setSticky, setScroll } = useStore();
@@ -28,6 +29,7 @@ export default function Root() {
       <Spotify />
       <TopBar />
       <Outlet />
+      <Blood />
       <MobileNav />
       <Backdrop />
     </>

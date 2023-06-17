@@ -73,19 +73,4 @@
       cursor: grabbing;
     }
   }
-
-  @keyframes slideUp {
-    0% {
-      top: 200vh;
-    }
-    80% {
-      top: 0;
-    }
-    90% {
-      top: 2vh;
-    }
-    100% {
-      top: 0;
-    }
-  }
 }

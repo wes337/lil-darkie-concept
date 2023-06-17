@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useStore from "../store";
 import monsters from "../images/monsters.png";
 import fallTourTitle from "../images/tour/fall-tour-title-dark.png";
@@ -6,7 +6,8 @@ import Face from "../components/face";
 import "../styles/landing.scss";
 
 export default function Landing() {
-  const { flashing, setFlashing } = useStore();
+  const navigate = useNavigate();
+  const { flashing, setFlashing, setBloodTransition } = useStore();
 
   return (
     <div className={`landing${flashing ? " flashing" : ""}`}>
@@ -15,13 +16,16 @@ export default function Landing() {
         <div className="landing-footer-tour">
           <img src={fallTourTitle} alt="" />
         </div>
-        <Link
-          to="/fall-tour"
+        <button
           onPointerOver={() => setFlashing(true)}
           onPointerLeave={() => setFlashing(false)}
+          onClick={() => {
+            setBloodTransition(true);
+            setTimeout(() => navigate("/fall-tour"), 200);
+          }}
         >
           Get Tickets
-        </Link>
+        </button>
       </div>
       <div className="landing-monsters">
         <img src={monsters} alt="" />

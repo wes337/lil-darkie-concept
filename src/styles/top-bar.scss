@@ -15,6 +15,8 @@
   transition: top 0.2s ease;
 
   .top-bar-logo {
+    all: unset;
+    cursor: pointer;
     position: relative;
     max-width: 200px;
     height: 58px;
@@ -62,7 +64,7 @@
   }
 
   a:not(.top-bar-logo),
-  button {
+  button:not(.top-bar-logo) {
     @include for-phone-only {
       display: none;
     }
@@ -113,7 +115,7 @@
     }
 
     a,
-    button {
+    button:not(.top-bar-logo) {
       color: $color-yellow;
       text-shadow: -1px -1px 0 $color-black, 1px -1px 0 $color-black,
         -1px 1px 0 $color-black, 1px 1px 0 $color-black, 2px 2px $color-black;

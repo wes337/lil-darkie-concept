@@ -15,6 +15,8 @@ const useStore = create((set) => ({
   setFlashing: (flashing) => set(() => ({ flashing })),
   sticky: false,
   setSticky: (sticky) => set(() => ({ sticky })),
+  bloodTransition: false,
+  setBloodTransition: (bloodTransition) => set(() => ({ bloodTransition })),
   scroll: 0,
   setScroll: (scroll) => set(() => ({ scroll })),
   lightMode: false,
