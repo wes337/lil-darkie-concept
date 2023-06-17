@@ -32,10 +32,6 @@
 }
 
 .mobile-nav {
-  @include for-desktop {
-    display: none;
-  }
-
   position: fixed;
   background-color: darken($color-red, 5%);
   top: 0;
@@ -54,6 +50,14 @@
 
   &.open {
     transform: translateX(0);
+
+    @include for-desktop {
+      box-shadow: -8px 4px 0px darken($color-red, 25%);
+    }
+  }
+
+  @include for-desktop {
+    width: 40vw;
   }
 
   .mobile-nav-header {
@@ -134,6 +138,10 @@
     margin-top: auto;
     padding-bottom: calc(env(safe-area-inset-bottom) + $space-xl);
     color: $color-white;
+
+    @include for-desktop {
+      font-size: $font-size-sm;
+    }
   }
 }
 
@@ -164,29 +172,37 @@
 }
 
 .planes {
-  @include for-desktop {
-    display: none;
-  }
-
   img {
     position: fixed;
     z-index: 4;
     pointer-events: none;
     mix-blend-mode: color-burn;
-    opacity: 0.25;
+    opacity: 0.5;
     pointer-events: none;
     transition: bottom 1s ease, left 1s ease;
+
+    @include for-desktop {
+      opacity: 0.75;
+    }
 
     &.plane-one {
       width: 35%;
       bottom: 50%;
       left: -100%;
+
+      @include for-desktop {
+        width: 10%;
+      }
     }
 
     &.plane-two {
       width: 75%;
       bottom: -100%;
       right: -50%;
+
+      @include for-desktop {
+        width: 20%;
+      }
     }
   }
 
@@ -194,11 +210,44 @@
     .plane-one {
       bottom: 15%;
       left: 20%;
+
+      @include for-desktop {
+        left: auto;
+        right: 15%;
+      }
     }
 
     .plane-two {
       bottom: -2%;
       right: -10%;
+
+      @include for-desktop {
+        bottom: -2%;
+        right: -2%;
+      }
+    }
+  }
+}
+
+.blur {
+  display: none;
+
+  @include for-desktop {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    background-color: rgba($color-black, 0.75);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+
+    &.open {
+      opacity: 1;
+      pointer-events: all;
     }
   }
 }

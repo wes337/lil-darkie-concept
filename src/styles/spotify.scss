@@ -22,10 +22,10 @@
     &.sticky {
       margin: 14px $space-md;
     }
-  }
 
-  &.hide {
-    left: -50%;
+    &.hide {
+      left: -50%;
+    }
   }
 
   &:hover {

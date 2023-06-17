@@ -37,12 +37,8 @@
   }
 
   .blood-middle {
-    height: 75vh;
+    height: 100vh;
     background-color: $color-red;
-
-    @include for-phone-only {
-      height: 100vh;
-    }
   }
 
   &.show {
@@ -55,7 +51,7 @@
         transform: translateY(100%);
       }
       100% {
-        transform: translateY(-160%);
+        transform: translateY(-180%);
       }
     }
   }

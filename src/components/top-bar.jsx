@@ -11,15 +11,16 @@ import "../styles/top-bar.scss";
 export default function TopBar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { lightMode, sticky, setBloodTransition } = useStore();
+  const { lightMode, sticky, setBloodTransition, setMobileNavOpen } =
+    useStore();
 
-  const onClickLogo = () => {
-    if (location.pathname === "/") {
+  const transitionTo = (url) => {
+    if (location.pathname === url) {
       return;
     }
 
     setBloodTransition(true);
-    setTimeout(() => navigate("/"), 200);
+    setTimeout(() => navigate(url), 500);
   };
 
   return (
@@ -33,22 +34,22 @@ export default function TopBar() {
           <img src={gun} alt="" />
           <span>Merch</span>
         </Link>
-        <Link to="/gallery">
+        <button onClick={() => transitionTo("/gallery")}>
           <img src={skull} alt="" />
           <span>Gallery</span>
-        </Link>
+        </button>
         <button
-          onClick={onClickLogo}
+          onClick={() => transitionTo("/")}
           className={`top-bar-logo${sticky ? " sticky" : ""}`}
         >
           <img className="logo-yellow" src={logoYellow} alt="Lil Darkie" />
           <img className="logo-primary" src={logo} alt="Lil Darkie" />
         </button>
-        <Link to="/upcoming-shows">
+        <button onClick={() => transitionTo("/upcoming-shows")}>
           <img src={grave} alt="" />
           <span>Upcoming Shows</span>
-        </Link>
-        <button>
+        </button>
+        <button onClick={() => setMobileNavOpen(true)}>
           <img src={booze} alt="" />
           <span>More</span>
         </button>

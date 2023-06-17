@@ -26,6 +26,10 @@ export default function MobileNav() {
 
   return (
     <>
+      <div
+        className={`blur${mobileNavOpen ? " open" : ""}`}
+        onClick={() => setMobileNavOpen(false)}
+      />
       <button
         className={`mobile-nav-button${sticky ? " sticky" : ""}`}
         onClick={() => setMobileNavOpen(true)}

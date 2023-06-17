@@ -21,7 +21,7 @@ export default function Landing() {
           onPointerLeave={() => setFlashing(false)}
           onClick={() => {
             setBloodTransition(true);
-            setTimeout(() => navigate("/fall-tour"), 200);
+            setTimeout(() => navigate("/fall-tour"), 400);
           }}
         >
           Get Tickets
