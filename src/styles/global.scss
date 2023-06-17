@@ -23,3 +23,13 @@ body {
     overflow: hidden;
   }
 }
+
+html {
+  &.no-scroll {
+    overflow: hidden;
+
+    body {
+      overflow: hidden;
+    }
+  }
+}
