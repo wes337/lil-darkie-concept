@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/lil-darkie-concept/static/css/main.cb962ae7.css",
-    "main.js": "/lil-darkie-concept/static/js/main.6b7c310c.js",
+    "main.js": "/lil-darkie-concept/static/js/main.faa1187c.js",
     "static/js/787.e997bd31.chunk.js": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js",
-    "static/media/paratrooper.png": "/lil-darkie-concept/static/media/paratrooper.cf7608f7ac84866a21bd.png",
-    "static/media/bottom.png": "/lil-darkie-concept/static/media/bottom.fff8372da0429511b163.png",
-    "static/media/camo.png": "/lil-darkie-concept/static/media/camo.67e3728784bb1d68b3e0.png",
-    "static/media/fall-tour-title.png": "/lil-darkie-concept/static/media/fall-tour-title.81372c21d7af86ff9e8f.png",
-    "static/media/fall-tour-title-dark.png": "/lil-darkie-concept/static/media/fall-tour-title-dark.0469cf2748b1ab24b112.png",
-    "static/media/voices.png": "/lil-darkie-concept/static/media/voices.9029d39378dc90cbd2fc.png",
-    "static/media/vote_guy.png": "/lil-darkie-concept/static/media/vote_guy.cc0712afb565b021c341.png",
-    "static/media/plane-1.png": "/lil-darkie-concept/static/media/plane-1.694f63957dddb3861df9.png",
-    "static/media/mushroom.png": "/lil-darkie-concept/static/media/mushroom.d493893f0dd40453f62e.png",
+    "static/media/camo-small.png": "/lil-darkie-concept/static/media/camo-small.cae0d6e931cf0266c456.png",
     "static/media/tv.jpg": "/lil-darkie-concept/static/media/tv.0bc8d307a0a829ac862e.jpg",
     "static/media/concrete-wall-2.png": "/lil-darkie-concept/static/media/concrete-wall-2.28844a728d06b7ed765b.png",
-    "static/media/frame-bottom-small.png": "/lil-darkie-concept/static/media/frame-bottom-small.ca34c6de64f86970c856.png",
-    "static/media/plane-2.png": "/lil-darkie-concept/static/media/plane-2.ba8173f616a9f7def9df.png",
+    "static/media/paratrooper-small.png": "/lil-darkie-concept/static/media/paratrooper-small.e3ae566942fc1080a9e6.png",
+    "static/media/voices-small.png": "/lil-darkie-concept/static/media/voices-small.24a3249939da3c178bca.png",
+    "static/media/bottom-small.png": "/lil-darkie-concept/static/media/bottom-small.f29023c1b907350bbbb8.png",
+    "static/media/mushroom-small.png": "/lil-darkie-concept/static/media/mushroom-small.1906b621fde99c3062ba.png",
     "static/media/boom.png": "/lil-darkie-concept/static/media/boom.0ffe17a9b108d353d715.png",
     "static/media/dust.png": "/lil-darkie-concept/static/media/dust.5e79dee42ca9cf9ce81a.png",
+    "static/media/frame-bottom-small.png": "/lil-darkie-concept/static/media/frame-bottom-small.dd866039f0273e04ec0a.png",
+    "static/media/plane-1-small.png": "/lil-darkie-concept/static/media/plane-1-small.e47e9c9ae40b6651822c.png",
+    "static/media/vote_guy-small.png": "/lil-darkie-concept/static/media/vote_guy-small.aa2e0104dfcdffbda306.png",
+    "static/media/plane-2-small.png": "/lil-darkie-concept/static/media/plane-2-small.14429ee72ff0691b3ce7.png",
+    "static/media/fall-tour-title-small.png": "/lil-darkie-concept/static/media/fall-tour-title-small.5e50f0724d2830839424.png",
+    "static/media/fall-tour-title-dark-small.png": "/lil-darkie-concept/static/media/fall-tour-title-dark-small.f5418382b00ecd5ab6bb.png",
     "static/media/end.png": "/lil-darkie-concept/static/media/end.d8a23b5f4ad90107d176.png",
     "static/media/concrete-wall.png": "/lil-darkie-concept/static/media/concrete-wall.26941afecc5d52c56e41.png",
     "static/media/broken.png": "/lil-darkie-concept/static/media/broken.8632344ffdcc83c4b70c.png",
@@ -39,11 +39,11 @@
     "static/media/skull.png": "/lil-darkie-concept/static/media/skull.898310a283b63cf3874a.png",
     "index.html": "/lil-darkie-concept/index.html",
     "main.cb962ae7.css.map": "/lil-darkie-concept/static/css/main.cb962ae7.css.map",
-    "main.6b7c310c.js.map": "/lil-darkie-concept/static/js/main.6b7c310c.js.map",
+    "main.faa1187c.js.map": "/lil-darkie-concept/static/js/main.faa1187c.js.map",
     "787.e997bd31.chunk.js.map": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb962ae7.css",
-    "static/js/main.6b7c310c.js"
+    "static/js/main.faa1187c.js"
   ]
 }
