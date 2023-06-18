@@ -34,9 +34,9 @@ export default function TopBar() {
           <img src={gun} alt="" />
           <span>Merch</span>
         </Link>
-        <button onClick={() => transitionTo("/gallery")}>
+        <button onClick={() => transitionTo("/upcoming-shows")}>
           <img src={skull} alt="" />
-          <span>Gallery</span>
+          <span>Upcoming Shows</span>
         </button>
         <button
           onClick={() => transitionTo("/")}
@@ -45,9 +45,9 @@ export default function TopBar() {
           <img className="logo-yellow" src={logoYellow} alt="Lil Darkie" />
           <img className="logo-primary" src={logo} alt="Lil Darkie" />
         </button>
-        <button onClick={() => transitionTo("/upcoming-shows")}>
+        <button onClick={() => transitionTo("/fall-tour")}>
           <img src={grave} alt="" />
-          <span>Upcoming Shows</span>
+          <span>Fall Tour 2023</span>
         </button>
         <button onClick={() => setMobileNavOpen(true)}>
           <img src={booze} alt="" />
