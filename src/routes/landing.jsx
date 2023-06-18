@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import useStore from "../store";
 import monsters from "../images/monsters.png";
-import fallTourTitle from "../images/tour/fall-tour-title-dark.png";
+import fallTourTitle from "../images/tour/fall-tour-title-dark-small.png";
 import Face from "../components/face";
 import "../styles/landing.scss";
 

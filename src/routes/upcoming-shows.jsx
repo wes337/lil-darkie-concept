@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import camo from "../images/camo.png";
-import voices from "../images/voices.png";
+import camo from "../images/camo-small.png";
+import voices from "../images/voices-small.png";
 import boom from "../images/boom.png";
 import upcomingShowsData from "../data/upcoming-shows.json";
 import { formateDate, isMobileSizedScreen } from "../utils";

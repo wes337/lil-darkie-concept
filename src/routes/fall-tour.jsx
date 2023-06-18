@@ -2,12 +2,12 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useStore from "../store";
 import { isMobileSizedScreen, formateDate } from "../utils";
-import title from "../images/tour/fall-tour-title.png";
+import title from "../images/tour/fall-tour-title-small.png";
 import end from "../images/tour/end.png";
-import bottom from "../images/tour/bottom.png";
-import voteGuy from "../images/vote_guy.png";
+import bottom from "../images/tour/bottom-small.png";
+import voteGuy from "../images/vote_guy-small.png";
 import tourDates from "../data/fall-tour-dates.json";
-import paratrooper from "../images/paratrooper.png";
+import paratrooper from "../images/paratrooper-small.png";
 import "../styles/fall-tour.scss";
 
 export default function FallTour() {
