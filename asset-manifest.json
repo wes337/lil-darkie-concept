@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lil-darkie-concept/static/css/main.dccfacb8.css",
-    "main.js": "/lil-darkie-concept/static/js/main.e1ec5e76.js",
+    "main.css": "/lil-darkie-concept/static/css/main.709d9108.css",
+    "main.js": "/lil-darkie-concept/static/js/main.5de67bfd.js",
     "static/js/787.e997bd31.chunk.js": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js",
     "static/media/camo-small.png": "/lil-darkie-concept/static/media/camo-small.cae0d6e931cf0266c456.png",
     "static/media/tv.jpg": "/lil-darkie-concept/static/media/tv.0bc8d307a0a829ac862e.jpg",
@@ -9,6 +9,7 @@
     "static/media/paratrooper-small.png": "/lil-darkie-concept/static/media/paratrooper-small.e3ae566942fc1080a9e6.png",
     "static/media/voices-small.png": "/lil-darkie-concept/static/media/voices-small.24a3249939da3c178bca.png",
     "static/media/bottom-small.png": "/lil-darkie-concept/static/media/bottom-small.f29023c1b907350bbbb8.png",
+    "static/media/album.jpg": "/lil-darkie-concept/static/media/album.fd05cec539e37ea0b2fd.jpg",
     "static/media/mushroom-small.png": "/lil-darkie-concept/static/media/mushroom-small.1906b621fde99c3062ba.png",
     "static/media/boom.png": "/lil-darkie-concept/static/media/boom.0ffe17a9b108d353d715.png",
     "static/media/dust.png": "/lil-darkie-concept/static/media/dust.5e79dee42ca9cf9ce81a.png",
@@ -41,12 +42,12 @@
     "static/media/cig.png": "/lil-darkie-concept/static/media/cig.cd376386e2ae9d49be3a.png",
     "static/media/skull.png": "/lil-darkie-concept/static/media/skull.898310a283b63cf3874a.png",
     "index.html": "/lil-darkie-concept/index.html",
-    "main.dccfacb8.css.map": "/lil-darkie-concept/static/css/main.dccfacb8.css.map",
-    "main.e1ec5e76.js.map": "/lil-darkie-concept/static/js/main.e1ec5e76.js.map",
+    "main.709d9108.css.map": "/lil-darkie-concept/static/css/main.709d9108.css.map",
+    "main.5de67bfd.js.map": "/lil-darkie-concept/static/js/main.5de67bfd.js.map",
     "787.e997bd31.chunk.js.map": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dccfacb8.css",
-    "static/js/main.e1ec5e76.js"
+    "static/css/main.709d9108.css",
+    "static/js/main.5de67bfd.js"
   ]
 }
