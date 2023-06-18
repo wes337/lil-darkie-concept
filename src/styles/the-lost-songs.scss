@@ -149,7 +149,30 @@
   object-fit: cover;
   object-position: center;
   background-color: #7563a1;
-  opacity: 0.25;
+  opacity: 0.75;
+
+  animation: positionChange 5s steps(1) infinite;
+
+  @keyframes positionChange {
+    0% {
+      object-position: top;
+    }
+    20% {
+      object-position: left;
+    }
+    40% {
+      object-position: right;
+    }
+    60% {
+      object-position: bottom;
+    }
+    80% {
+      object-position: center;
+    }
+    100% {
+      object-position: bottom left;
+    }
+  }
 }
 
 .soundcloud-player {
