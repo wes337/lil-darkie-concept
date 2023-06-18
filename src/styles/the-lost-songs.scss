@@ -159,6 +159,7 @@
   max-width: 800px;
   margin: auto;
   left: 0;
+  z-index: 1;
 
   @include for-desktop {
     right: 0;
