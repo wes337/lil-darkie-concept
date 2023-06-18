@@ -13,6 +13,9 @@ import cig from "../images/icons/cig.png";
 import gun from "../images/icons/gun.png";
 import grave from "../images/icons/grave.png";
 import close from "../images/icons/close.png";
+import spotify from "../images/icons/spotify.png";
+import soundcloud from "../images/icons/soundcloud.png";
+import youtube from "../images/icons/youtube.png";
 import "../styles/mobile-nav.scss";
 
 export default function MobileNav() {
@@ -39,6 +42,23 @@ export default function MobileNav() {
       <div className={`mobile-nav${mobileNavOpen ? " open" : ""}`}>
         <div className="mobile-nav-header">
           <img className="mobile-nav-logo" src={logo} alt="Lil Darkie" />
+          <div className="social-media-links">
+            <Link
+              to="https://open.spotify.com/artist/62F9BiUmjqeXbBztCwiX1U"
+              target="_blank"
+            >
+              <img src={spotify} alt="Spotify" />
+            </Link>
+            <Link to="https://soundcloud.com/lildvrkie" target="_blank">
+              <img src={soundcloud} alt="Soundcloud" />
+            </Link>
+            <Link
+              to="https://www.youtube.com/channel/UCy1PnulzEixUtsR-w-Pgd4w"
+              target="_blank"
+            >
+              <img src={youtube} alt="YouTube" />
+            </Link>
+          </div>
           <button
             className="mobile-nav-close"
             onClick={() => setMobileNavOpen(false)}
@@ -68,20 +88,16 @@ export default function MobileNav() {
             <span>Posters</span>
           </Link>
           <Link to="/art">
-            <img src={gun} alt="" />
-            <span>Some Art</span>
-          </Link>
-          <Link to="/writing">
             <img src={booze} alt="" />
-            <span>Writing</span>
+            <span>Some Art</span>
           </Link>
           <Link to="/the-lost-songs">
             <img src={grave} alt="" />
             <span>The Lost Songs</span>
           </Link>
-        </div>
-        <div className="mobile-nav-copyright">
-          Copyright © 2023 Lil Darkie - All Rights Reserved.
+          <div className="mobile-nav-copyright">
+            Copyright © 2023 Lil Darkie - All Rights Reserved.
+          </div>
         </div>
       </div>
       <div className={`mushroom${mobileNavOpen ? " open" : ""}`}>

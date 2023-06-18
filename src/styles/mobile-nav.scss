@@ -39,8 +39,8 @@
   width: 100vw;
   min-height: 100vh;
   max-height: -webkit-fill-available;
-  overflow-y: auto;
   overflow-x: hidden;
+  overflow-y: auto;
   z-index: 4;
   display: flex;
   flex-direction: column;
@@ -62,12 +62,31 @@
 
   .mobile-nav-header {
     display: flex;
-    padding: 16px;
+    align-items: center;
+    padding: $space-md $space-lg;
+    gap: $space-md;
     user-select: none;
 
+    .social-media-links {
+      display: flex;
+      align-items: center;
+      gap: $space-md;
+      margin-left: $space-sm;
+
+      img {
+        width: 32px;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
     .mobile-nav-logo {
-      height: 60px;
+      height: 48px;
       width: auto;
+
+      @include for-phone-only {
+        height: 32px;
+      }
     }
 
     .mobile-nav-close {
@@ -135,11 +154,12 @@
     font-weight: 300;
     letter-spacing: -0.5px;
     text-shadow: 2px 3px $color-black;
-    margin-top: auto;
-    padding-bottom: calc(env(safe-area-inset-bottom) + $space-xl);
+    margin-top: 80px;
     color: $color-white;
 
     @include for-desktop {
+      position: fixed;
+      bottom: $space-md;
       font-size: $font-size-sm;
     }
   }
@@ -176,8 +196,8 @@
     position: fixed;
     z-index: 4;
     pointer-events: none;
-    mix-blend-mode: color-burn;
-    opacity: 0.5;
+    mix-blend-mode: multiply;
+    opacity: 0.25;
     pointer-events: none;
     transition: bottom 1s ease, left 1s ease;
 
