@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import face from "../images/face/face-1.png";
 import faceBlink from "../images/face/face-1-blink.png";
+import faceSpeak from "../images/face/face-2.png";
+import faceSpeakBlink from "../images/face/face-5.png";
+import useStore from "../store";
 import "../styles/face.scss";
 
 export default function Face() {
+  const { setFlashing } = useStore();
+  const [facePressed, setFacePressed] = useState(false);
   const [blinking, setBlinking] = useState(false);
 
   useEffect(() => {
@@ -29,12 +34,35 @@ export default function Face() {
     };
   }, []);
 
+  useEffect(() => {
+    setFlashing(facePressed);
+  }, [facePressed, setFlashing]);
+
   return (
-    <div className={`face${blinking ? " blink" : ""}`}>
-      <img src={face} alt="" />
+    <div
+      className={`face${blinking ? " blink" : ""}`}
+      onPointerDown={() => setFacePressed(true)}
+      onPointerUp={() => setFacePressed(false)}
+    >
+      <div className={`red${facePressed ? " show" : ""}`} />
       <img
-        className={`blink${blinking ? " show" : ""}`}
+        className={`normal${facePressed ? "" : " show"}`}
+        src={face}
+        alt=""
+      />
+      <img
+        className={`blink${!facePressed && blinking ? " show" : ""}`}
         src={faceBlink}
+        alt=""
+      />
+      <img
+        className={`speak${!blinking && facePressed ? " show" : ""}`}
+        src={faceSpeak}
+        alt=""
+      />
+      <img
+        className={`speak-blink${blinking && facePressed ? " show" : ""}`}
+        src={faceSpeakBlink}
         alt=""
       />
     </div>

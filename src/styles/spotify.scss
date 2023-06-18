@@ -11,6 +11,7 @@
   transition: all 1s cubic-bezier(0.25, 0.75, 0.5, 1.25);
 
   img {
+    pointer-events: none;
     width: 100%;
   }
 

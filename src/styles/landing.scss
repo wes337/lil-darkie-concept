@@ -83,12 +83,14 @@
 
     .landing-footer-tour {
       max-width: 90vw;
+      user-select: none;
 
       @include for-desktop {
         max-width: 800px;
       }
 
       img {
+        pointer-events: none;
         width: 100%;
         filter: drop-shadow(1px 3px 0px $color-black);
       }
