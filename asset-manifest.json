@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lil-darkie-concept/static/css/main.129f2b0c.css",
-    "main.js": "/lil-darkie-concept/static/js/main.a80ced3a.js",
+    "main.css": "/lil-darkie-concept/static/css/main.805cfbad.css",
+    "main.js": "/lil-darkie-concept/static/js/main.19de76f4.js",
     "static/js/787.e997bd31.chunk.js": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js",
     "static/media/camo-small.png": "/lil-darkie-concept/static/media/camo-small.cae0d6e931cf0266c456.png",
     "static/media/tv.jpg": "/lil-darkie-concept/static/media/tv.0bc8d307a0a829ac862e.jpg",
@@ -42,12 +42,12 @@
     "static/media/cig.png": "/lil-darkie-concept/static/media/cig.cd376386e2ae9d49be3a.png",
     "static/media/skull.png": "/lil-darkie-concept/static/media/skull.898310a283b63cf3874a.png",
     "index.html": "/lil-darkie-concept/index.html",
-    "main.129f2b0c.css.map": "/lil-darkie-concept/static/css/main.129f2b0c.css.map",
-    "main.a80ced3a.js.map": "/lil-darkie-concept/static/js/main.a80ced3a.js.map",
+    "main.805cfbad.css.map": "/lil-darkie-concept/static/css/main.805cfbad.css.map",
+    "main.19de76f4.js.map": "/lil-darkie-concept/static/js/main.19de76f4.js.map",
     "787.e997bd31.chunk.js.map": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.129f2b0c.css",
-    "static/js/main.a80ced3a.js"
+    "static/css/main.805cfbad.css",
+    "static/js/main.19de76f4.js"
   ]
 }
