@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lil-darkie-concept/static/css/main.cb962ae7.css",
-    "main.js": "/lil-darkie-concept/static/js/main.faa1187c.js",
+    "main.css": "/lil-darkie-concept/static/css/main.6b2dfcab.css",
+    "main.js": "/lil-darkie-concept/static/js/main.9e38358d.js",
     "static/js/787.e997bd31.chunk.js": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js",
     "static/media/camo-small.png": "/lil-darkie-concept/static/media/camo-small.cae0d6e931cf0266c456.png",
     "static/media/tv.jpg": "/lil-darkie-concept/static/media/tv.0bc8d307a0a829ac862e.jpg",
@@ -30,6 +30,7 @@
     "static/media/knife.png": "/lil-darkie-concept/static/media/knife.355244d38540c1c8e2fa.png",
     "static/media/monsters.png": "/lil-darkie-concept/static/media/monsters.ff65d1a99fd166a82563.png",
     "static/media/spotify.png": "/lil-darkie-concept/static/media/spotify.82c5eff27cc38602471e.png",
+    "static/media/soundcloud.png": "/lil-darkie-concept/static/media/soundcloud.bc4187ed515d956396b1.png",
     "static/media/face-1-blink.png": "/lil-darkie-concept/static/media/face-1-blink.fdae5077f76a9ee052be.png",
     "static/media/booze.png": "/lil-darkie-concept/static/media/booze.ce2f8985e53572d8decb.png",
     "static/media/asfalt-dark.png": "/lil-darkie-concept/static/media/asfalt-dark.12fc1a7a26724fd592f6.png",
@@ -38,12 +39,12 @@
     "static/media/cig.png": "/lil-darkie-concept/static/media/cig.cd376386e2ae9d49be3a.png",
     "static/media/skull.png": "/lil-darkie-concept/static/media/skull.898310a283b63cf3874a.png",
     "index.html": "/lil-darkie-concept/index.html",
-    "main.cb962ae7.css.map": "/lil-darkie-concept/static/css/main.cb962ae7.css.map",
-    "main.faa1187c.js.map": "/lil-darkie-concept/static/js/main.faa1187c.js.map",
+    "main.6b2dfcab.css.map": "/lil-darkie-concept/static/css/main.6b2dfcab.css.map",
+    "main.9e38358d.js.map": "/lil-darkie-concept/static/js/main.9e38358d.js.map",
     "787.e997bd31.chunk.js.map": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb962ae7.css",
-    "static/js/main.faa1187c.js"
+    "static/css/main.6b2dfcab.css",
+    "static/js/main.9e38358d.js"
   ]
 }
