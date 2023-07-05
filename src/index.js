@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Landing from "./routes/landing";
 import UpcomingShows from "./routes/upcoming-shows";
@@ -13,7 +13,7 @@ import TheLostSongs from "./routes/the-lost-songs";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/global.scss";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
