@@ -1,11 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import camo from "../images/camo-small.png";
-import voices from "../images/voices-small.png";
-import boom from "../images/boom.png";
-import upcomingShowsData from "../data/upcoming-shows.json";
-import { formateDate, isMobileSizedScreen } from "../utils";
+import { CDN_URL, formateDate, isMobileSizedScreen } from "../utils";
 import useStore from "../store";
+import upcomingShowsData from "../data/upcoming-shows.json";
 import "../styles/upcoming-shows.scss";
 
 const allShows = upcomingShowsData.map((show) => {
@@ -64,13 +61,13 @@ export default function UpcomingShows() {
 
   return (
     <>
-      <img className="camo" src={camo} alt="" />
+      <img className="camo" src={`${CDN_URL}/camo-small.png`} alt="" />
       <div className={`upcoming-shows${flashing ? " flashing" : ""}`}>
         <h1>Upcoming Shows</h1>
         <div className="upcoming-shows-list">
           <img
             className={`voices${flashing ? " flashing" : ""}`}
-            src={voices}
+            src={`${CDN_URL}/voices-small.png`}
             alt=""
           />
           {[...upcomingShows, ...previousShows].map((upcomingShow) => {
@@ -95,7 +92,7 @@ export default function UpcomingShows() {
                   target="_blank"
                 >
                   Tickets
-                  <img className="boom" src={boom} alt="" />
+                  <img className="boom" src={`${CDN_URL}/boom.png`} alt="" />
                 </Link>
               </div>
             );

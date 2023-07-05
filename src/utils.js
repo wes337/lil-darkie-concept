@@ -28,3 +28,28 @@ export function formateDate(dateString) {
     weekday: "short",
   }).format(new Date(dateString));
 }
+
+export const CDN_URL = "https://f004.backblazeb2.com/file/lil-darkie";
+
+export function preloadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = url;
+    img.onload = () => {
+      img.remove();
+      resolve();
+    };
+    img.onerror = () => {
+      img.remove();
+      reject();
+    };
+  });
+}
+
+export async function preloadImages(urls) {
+  const preloadImagePromises = urls.map(async (url) => {
+    await preloadImage(url);
+  });
+
+  await Promise.all(preloadImagePromises);
+}

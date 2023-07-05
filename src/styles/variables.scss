@@ -31,6 +31,8 @@ $space-md: 16px;
 $space-lg: 24px;
 $space-xl: 32px;
 
+$cdn-url: "https://f004.backblazeb2.com/file/lil-darkie";
+
 @mixin for-phone-only {
   @media screen and (max-width: $screen-size-sm) {
     @content;

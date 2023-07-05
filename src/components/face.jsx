@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
-import face from "../images/face/face-1.png";
-import faceBlink from "../images/face/face-1-blink.png";
-import faceSpeak from "../images/face/face-2.png";
-import faceSpeakBlink from "../images/face/face-5.png";
+import { CDN_URL } from "../utils";
 import useStore from "../store";
 import "../styles/face.scss";
 
@@ -47,22 +44,22 @@ export default function Face() {
       <div className={`red${facePressed ? " show" : ""}`} />
       <img
         className={`normal${facePressed ? "" : " show"}`}
-        src={face}
+        src={`${CDN_URL}/face/face-1.png`}
         alt=""
       />
       <img
         className={`blink${!facePressed && blinking ? " show" : ""}`}
-        src={faceBlink}
+        src={`${CDN_URL}/face/face-1-blink.png`}
         alt=""
       />
       <img
         className={`speak${!blinking && facePressed ? " show" : ""}`}
-        src={faceSpeak}
+        src={`${CDN_URL}/face/face-2.png`}
         alt=""
       />
       <img
         className={`speak-blink${blinking && facePressed ? " show" : ""}`}
-        src={faceSpeakBlink}
+        src={`${CDN_URL}/face/face-5.png`}
         alt=""
       />
     </div>

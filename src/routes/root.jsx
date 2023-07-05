@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import useStore from "../store";
 import TopBar from "../components/top-bar";
-import MobileNav from "../components/mobile-nav";
+import Nav from "../components/nav";
 import Backdrop from "../components/backdrop";
 import Spotify from "../components/spotify";
 import Blood from "../components/blood";
@@ -30,7 +30,7 @@ export default function Root() {
       <TopBar />
       <Outlet />
       <Blood />
-      <MobileNav />
+      <Nav />
       <Backdrop />
     </>
   );

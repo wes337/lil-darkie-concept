@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
-import albumCover from "../images/lost-songs/album.jpg";
-import melting from "../images/melting.png";
+import { CDN_URL } from "../utils";
 import "../styles/the-lost-songs.scss";
 
 export default function TheLostSongs() {
   return (
     <>
-      <img className="big" src={melting} alt="" />
+      <img className="big" src={`${CDN_URL}/melting.png`} alt="" />
       <div className="the-lost-songs">
         <div className="the-lost-songs-header">
           <div className="the-lost-songs-album-cover">
-            <img src={albumCover} alt="" />
+            <img src={`${CDN_URL}/lost-songs/album.jpg`} alt="" />
           </div>
           <div className="the-lost-songs-album-text">
             <h1>Lost Songs</h1>

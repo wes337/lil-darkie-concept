@@ -1,4 +1,4 @@
-import broken from "../images/broken.png";
+import { CDN_URL } from "../utils";
 import useStore from "../store";
 import "../styles/blood.scss";
 
@@ -19,7 +19,7 @@ export default function Blood() {
           />
         </svg>
         <div className="blood-face">
-          <img src={broken} alt="" />
+          <img src={`${CDN_URL}/broken.png`} alt="" />
         </div>
       </div>
       <div className="blood-middle" />

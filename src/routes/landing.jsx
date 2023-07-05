@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { CDN_URL } from "../utils";
 import useStore from "../store";
-import monsters from "../images/monsters.png";
-import fallTourTitle from "../images/tour/fall-tour-title-dark-small.png";
 import Face from "../components/face";
 import "../styles/landing.scss";
 
@@ -14,7 +13,7 @@ export default function Landing() {
       <Face />
       <div className="landing-footer">
         <div className="landing-footer-tour">
-          <img src={fallTourTitle} alt="" />
+          <img src={`${CDN_URL}/fall-tour-title-dark-small.png`} alt="" />
         </div>
         <button
           onPointerOver={() => setFlashing(true)}
@@ -28,7 +27,7 @@ export default function Landing() {
         </button>
       </div>
       <div className="landing-monsters">
-        <img src={monsters} alt="" />
+        <img src={`${CDN_URL}/monsters.png`} alt="" />
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
 import { useEffect, useRef } from "react";
 import Hammer from "hammerjs";
+import { CDN_URL } from "../utils";
 import "../styles/posters.scss";
 
 const posters = [];
 for (let i = 1; i <= 13; i++) {
-  posters.push(`${process.env.PUBLIC_URL}/photos/posters/${i}.webp`);
+  posters.push(`${CDN_URL}/photos/posters/${i}.webp`);
 }
 
 export default function Posters() {

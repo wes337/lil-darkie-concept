@@ -1,15 +1,15 @@
 import { create } from "zustand";
 
 const useStore = create((set) => ({
-  mobileNavOpen: false,
-  setMobileNavOpen: (mobileNavOpen) => {
-    if (mobileNavOpen) {
+  navOpen: false,
+  setNavOpen: (navOpen) => {
+    if (navOpen) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
 
-    set(() => ({ mobileNavOpen }));
+    set(() => ({ navOpen }));
   },
   flashing: false,
   setFlashing: (flashing) => set(() => ({ flashing })),

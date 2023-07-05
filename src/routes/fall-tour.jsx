@@ -1,13 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import useStore from "../store";
-import { isMobileSizedScreen, formateDate } from "../utils";
-import title from "../images/tour/fall-tour-title-small.png";
-import end from "../images/tour/end.png";
-import bottom from "../images/tour/bottom-small.png";
-import voteGuy from "../images/vote_guy-small.png";
+import { isMobileSizedScreen, formateDate, CDN_URL } from "../utils";
 import tourDates from "../data/fall-tour-dates.json";
-import paratrooper from "../images/paratrooper-small.png";
+import useStore from "../store";
 import "../styles/fall-tour.scss";
 
 export default function FallTour() {
@@ -23,7 +18,7 @@ export default function FallTour() {
     <div className="fall-tour">
       <img
         className="title"
-        src={title}
+        src={`${CDN_URL}/fall-tour-title-small.png`}
         alt=""
         style={{
           transform: `translateY(${
@@ -35,7 +30,7 @@ export default function FallTour() {
       />
       <img
         className="end"
-        src={end}
+        src={`${CDN_URL}/end.png`}
         alt=""
         style={{
           transform: `translateY(calc(
@@ -47,13 +42,13 @@ export default function FallTour() {
             }px))`,
         }}
       />
-      <img className="bottom" src={bottom} alt="" />
+      <img className="bottom" src={`${CDN_URL}/bottom-small.png`} alt="" />
       <div className={`panel${scroll >= 100 ? " scroll" : ""}`}>
         <div className="vote-guy">
-          <img src={voteGuy} alt="" />
+          <img src={`${CDN_URL}/vote_guy-small.png`} alt="" />
         </div>
         <div className="paratrooper">
-          <img src={paratrooper} alt="" />
+          <img src={`${CDN_URL}/paratrooper-small.png`} alt="" />
         </div>
         <div className="tour-cities">
           {tourDates.map(({ date, city, venue, ticketLink }) => {

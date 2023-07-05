@@ -7,7 +7,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background-image: url("../images/textures/dust.png");
+  background-image: url($cdn-url + "/textures/dust.png");
   filter: invert(1);
   animation: changeBackground 0.5s steps(1) infinite alternate-reverse;
   background-repeat: repeat;
@@ -23,21 +23,21 @@
 
 @keyframes changeBackground {
   0% {
-    background-image: url("../images/textures/dust.png");
+    background-image: url($cdn-url + "/textures/dust.png");
   }
   20% {
-    background-image: url("../images/textures/concrete-wall-2.png");
+    background-image: url($cdn-url + "/textures/concrete-wall-2.png");
   }
   40% {
-    background-image: url("../images/textures/old-wall.png");
+    background-image: url($cdn-url + "/extures/old-wall.png");
   }
   60% {
-    background-image: url("../images/textures/concrete-wall.png");
+    background-image: url($cdn-url + "/textures/concrete-wall.png");
   }
   80% {
-    background-image: url("../images/textures/asfalt-dark.png");
+    background-image: url($cdn-url + "/textures/asfalt-dark.png");
   }
   100% {
-    background-image: url("../images/textures/old-wall.png");
+    background-image: url($cdn-url + "/textures/old-wall.png");
   }
 }

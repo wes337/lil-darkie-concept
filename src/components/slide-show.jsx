@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import frameLeft from "../images/frame-left-small.png";
-import frameRight from "../images/frame-right-small.png";
-import frameBottom from "../images/frame-bottom-small.png";
+import { CDN_URL } from "../utils";
 import "../styles/slide-show.scss";
 
 export default function SlideShow({ images }) {
@@ -9,17 +7,21 @@ export default function SlideShow({ images }) {
   const [selectedImage, setSelectedImage] = useState(0);
   const resetAutoScrollTimer = useRef();
 
+  const scrollToImage = (imageIndex) => {
+    const image = document.getElementById(`image-${imageIndex}`);
+    image?.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "center",
+    });
+  };
+
   useEffect(() => {
     if (stopAutoScroll) {
       return;
     }
 
-    const image = document.getElementById(`image-${selectedImage}`);
-    image.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "center",
-    });
+    scrollToImage(selectedImage);
   }, [selectedImage, stopAutoScroll]);
 
   useEffect(() => {
@@ -48,26 +50,33 @@ export default function SlideShow({ images }) {
   const onClickImage = (i) => {
     setSelectedImage(i);
     clearResetAutoScrollTimeout();
-    const image = document.getElementById(`image-${i}`);
-    image.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "center",
-    });
+    scrollToImage(i);
   };
 
   return (
     <div className="slide-show">
       <h1>USA 2023 Tour Photos</h1>
       <div className="slide-show-selected-image">
-        <img className="frame-left" src={frameLeft} alt="" />
+        <img
+          className="frame-left"
+          src={`${CDN_URL}/frame-left-small.png`}
+          alt=""
+        />
         <img
           className="slide-show-main-image"
           src={images[selectedImage]}
           alt=""
         />
-        <img className="frame-right" src={frameRight} alt="" />
-        <img className="frame-bottom" src={frameBottom} alt="" />
+        <img
+          className="frame-right"
+          src={`${CDN_URL}/frame-right-small.png`}
+          alt=""
+        />
+        <img
+          className="frame-bottom"
+          src={`${CDN_URL}/frame-bottom-small.png`}
+          alt=""
+        />
       </div>
       <div className="slide-show-images" onScroll={clearResetAutoScrollTimeout}>
         {images.map((image, i) => (
