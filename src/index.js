@@ -51,11 +51,11 @@ const router = createBrowserRouter([
         path: "/the-lost-songs",
         element: <TheLostSongs />,
       },
+      {
+        path: "/admin",
+        element: <Admin />,
+      },
     ],
-  },
-  {
-    path: "/admin",
-    element: <Admin />,
   },
 ]);
 
