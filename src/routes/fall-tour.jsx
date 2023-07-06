@@ -1,12 +1,11 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { isMobileSizedScreen, formateDate, CDN_URL } from "../utils";
-import tourDates from "../data/fall-tour-dates.json";
 import useStore from "../store";
 import "../styles/fall-tour.scss";
 
 export default function FallTour() {
-  const { setLightMode, scroll } = useStore();
+  const { tourDates, setLightMode, scroll } = useStore();
 
   useEffect(() => {
     setLightMode(true);

@@ -2,34 +2,35 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CDN_URL, formateDate, isMobileSizedScreen } from "../utils";
 import useStore from "../store";
-import upcomingShowsData from "../data/upcoming-shows.json";
 import "../styles/upcoming-shows.scss";
 
-const allShows = upcomingShowsData.map((show) => {
-  const date = new Date(show.date);
-  const isOver = date.getTime() < new Date().getTime();
-
-  return {
-    ...show,
-    date,
-    isOver,
-  };
-});
-
-const previousShows = allShows
-  .filter((show) => show.isOver)
-  .sort((a, b) => {
-    return b.date - a.date;
-  });
-
-const upcomingShows = allShows
-  .filter((show) => !show.isOver)
-  .sort((a, b) => {
-    return a.date - b.date;
-  });
-
 export default function UpcomingShows() {
-  const { flashing, setLightMode } = useStore();
+  const { upcomingShows, flashing, setLightMode } = useStore();
+
+  const allShows = upcomingShows.map((show) => {
+    const date =
+      typeof show.date === "string" ? new Date(show.date) : show.date;
+
+    const isOver = date.getTime() < new Date().getTime();
+
+    return {
+      ...show,
+      date,
+      isOver,
+    };
+  });
+
+  const previousShows = allShows
+    .filter((show) => show.isOver)
+    .sort((a, b) => {
+      return b.date - a.date;
+    });
+
+  const futureShows = allShows
+    .filter((show) => !show.isOver)
+    .sort((a, b) => {
+      return a.date - b.date;
+    });
 
   useEffect(() => {
     const hideScrollOnDesktop = () => {
@@ -70,7 +71,7 @@ export default function UpcomingShows() {
             src={`${CDN_URL}/voices-small.png`}
             alt=""
           />
-          {[...upcomingShows, ...previousShows].map((upcomingShow) => {
+          {[...futureShows, ...previousShows].map((upcomingShow) => {
             return (
               <div
                 key={upcomingShow.date}

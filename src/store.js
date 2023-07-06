@@ -1,6 +1,10 @@
 import { create } from "zustand";
 
 const useStore = create((set) => ({
+  tourDates: [],
+  upcomingShows: [],
+  setTourDates: (tourDates) => set(() => ({ tourDates })),
+  setUpcomingShows: (upcomingShows) => set(() => ({ upcomingShows })),
   navOpen: false,
   setNavOpen: (navOpen) => {
     if (navOpen) {

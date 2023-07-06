@@ -10,6 +10,7 @@ import Posters from "./routes/posters";
 import Art from "./routes/art";
 import Writing from "./routes/writing";
 import TheLostSongs from "./routes/the-lost-songs";
+import Admin from "./routes/admin";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/global.scss";
 
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
         element: <TheLostSongs />,
       },
     ],
+  },
+  {
+    path: "/admin",
+    element: <Admin />,
   },
 ]);
 

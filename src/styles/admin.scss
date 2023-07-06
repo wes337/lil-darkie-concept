@@ -1,0 +1,87 @@
+@import "./variables.scss";
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: $space-lg;
+  gap: $space-md;
+  overflow: hidden;
+
+  input {
+    font-family: "Martian Mono", monospace;
+    font-weight: 200;
+    background-color: rgba($color-gray, 1);
+    border: 0;
+    padding: $space-xs;
+    font-size: 14px;
+
+    &:focus,
+    &:active {
+      background-color: rgba($color-light-gray, 0.2);
+      outline: 2px solid $color-red;
+    }
+  }
+
+  .header {
+    display: flex;
+    gap: $space-lg;
+    height: calc(10vh - $space-lg - $space-md);
+
+    button {
+      all: unset;
+      font-size: $font-size-lg;
+      font-weight: 500;
+      color: $color-light-blue;
+      padding: $space-sm $space-xl;
+      margin: 0;
+      cursor: pointer;
+
+      &.selected {
+        color: $color-yellow;
+        background-color: rgba($color-yellow, 0.2);
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 4fr;
+    gap: $space-md $space-sm;
+    max-height: 80vh;
+    overflow: auto;
+    margin: auto;
+    padding: $space-sm;
+
+    div {
+      text-align: center;
+      font-weight: 100;
+      color: $color-light-blue;
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: $space-lg;
+    height: calc(10vh - $space-lg - $space-md);
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: $space-xs;
+
+      span {
+        font-size: $font-size-sm;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      font-size: $font-size-md;
+      height: 48px;
+      min-width: 200px;
+    }
+  }
+}
