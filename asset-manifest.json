@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/lil-darkie-concept/static/css/main.eb68cfb1.css",
-    "main.js": "/lil-darkie-concept/static/js/main.2ae5f258.js",
+    "main.js": "/lil-darkie-concept/static/js/main.8d670999.js",
     "static/js/787.e997bd31.chunk.js": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js",
     "index.html": "/lil-darkie-concept/index.html",
     "main.eb68cfb1.css.map": "/lil-darkie-concept/static/css/main.eb68cfb1.css.map",
-    "main.2ae5f258.js.map": "/lil-darkie-concept/static/js/main.2ae5f258.js.map",
+    "main.8d670999.js.map": "/lil-darkie-concept/static/js/main.8d670999.js.map",
     "787.e997bd31.chunk.js.map": "/lil-darkie-concept/static/js/787.e997bd31.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb68cfb1.css",
-    "static/js/main.2ae5f258.js"
+    "static/js/main.8d670999.js"
   ]
 }
