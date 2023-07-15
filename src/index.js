@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Landing from "./routes/landing";
 import UpcomingShows from "./routes/upcoming-shows";
@@ -14,7 +14,7 @@ import Admin from "./routes/admin";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/global.scss";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
