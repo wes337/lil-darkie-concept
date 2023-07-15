@@ -75,12 +75,8 @@ export default function Nav() {
             <img src={`${CDN_URL}/icons/cig.png`} alt="" />
             <span>Posters</span>
           </Link>
-          <Link to="/art">
-            <img src={`${CDN_URL}/icons/booze.png`} alt="" />
-            <span>Some Art</span>
-          </Link>
           <Link to="/the-lost-songs">
-            <img src={`${CDN_URL}/icons/grave.png`} alt="" />
+            <img src={`${CDN_URL}/icons/booze.png`} alt="" />
             <span>The Lost Songs</span>
           </Link>
           <div className="nav-copyright">
