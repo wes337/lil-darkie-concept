@@ -54,7 +54,8 @@ export default function Nav() {
           </button>
         </div>
         <div className="nav-links">
-          <Link to="https://www.smalldarkone.com">
+          {/* <Link to="https://www.smalldarkone.com"> */}
+          <Link to="#">
             <img src={`${CDN_URL}/icons/gun.png`} alt="" />
             <span>Merch</span>
           </Link>
